@@ -142,8 +142,9 @@ body.detail .nav .back{display:flex}
 .b-media.center{display:flex;justify-content:center}
 
 /* phone frame (wallpapers) */
-.gallery{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:6px 0}
+.gallery{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:6px 0}
 .phone{width:158px;border-radius:26px;padding:7px;background:#111418;box-shadow:var(--shadow-lift);flex:0 0 auto}
+.gallery .phone{width:148px}
 .phone .scr{border-radius:20px;overflow:hidden;aspect-ratio:9/19.3;background:#222}
 .phone .scr img{width:100%;height:100%;object-fit:cover}
 
