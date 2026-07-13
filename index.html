@@ -14,7 +14,8 @@
   var T = ['editorial','swiss','brutal','terminal','gallery'];
   var q = new URLSearchParams(location.search).get('theme');
   var s = null; try{ s = localStorage.getItem('xf-ui-theme'); }catch(e){}
-  var t = T.indexOf(q) > -1 ? q : (T.indexOf(s) > -1 ? s : 'editorial');
+  var t = T.indexOf(q) > -1 ? q : (T.indexOf(s) > -1 ? s : null);
+  if(!t){ location.replace('theme-apple.html' + location.hash); return; } // 默认 = 苹果方案（独立页）
   try{ localStorage.setItem('xf-ui-theme', t); }catch(e){}
   document.write('<link id="theme-css" rel="stylesheet" href="assets/css/themes/' + t + '.css">');
   document.documentElement.setAttribute('data-theme', t);
