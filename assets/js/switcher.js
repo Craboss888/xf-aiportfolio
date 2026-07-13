@@ -14,7 +14,7 @@
 
   function apply(id){
     if(id === current) return;
-    try{ localStorage.setItem('xf-ui-theme', id); }catch(e){}
+    try{ localStorage.setItem('xf-theme-choice', id); }catch(e){}
     if(id === 'apple'){ location.href = 'theme-apple.html'; return; }
     if(onApplePage){ location.href = 'index.html?theme=' + id; return; }
     var link = document.getElementById('theme-css');
