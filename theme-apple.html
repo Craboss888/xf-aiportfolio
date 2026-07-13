@@ -5,130 +5,122 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>谢峰 Xie Feng · AI Builder 作品集</title>
 <meta name="description" content="谢峰 Xie Feng — 独立 AI Builder。从身边的痛点出发，用 AI 把它做成能跑起来的产品。">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="12" fill="%232b3fe8"/><text x="50" y="72" font-size="56" text-anchor="middle" fill="white" font-family="Songti SC,serif" font-weight="700">谢</text></svg>'>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@700;900&family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-<script>
-(function(){
-  var T = ['editorial','swiss','brutal','terminal','gallery'];
-  var q = new URLSearchParams(location.search).get('theme');
-  var s = null; try{ s = localStorage.getItem('xf-ui-theme'); }catch(e){}
-  var t = T.indexOf(q) > -1 ? q : (T.indexOf(s) > -1 ? s : 'editorial');
-  try{ localStorage.setItem('xf-ui-theme', t); }catch(e){}
-  document.write('<link id="theme-css" rel="stylesheet" href="assets/css/themes/' + t + '.css">');
-  document.documentElement.setAttribute('data-theme', t);
-})();
-</script>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="24" fill="%230071e3"/><text x="50" y="70" font-size="46" text-anchor="middle" fill="white" font-family="-apple-system,sans-serif" font-weight="700">XF</text></svg>'>
+<link rel="stylesheet" href="assets/css/themes/apple.css">
 </head>
 <body>
 
 <!-- ============ NAV ============ -->
-<nav class="mast">
-  <div class="m-name" onclick="go('home')">谢峰<span class="m-en">XIE FENG</span></div>
-  <div class="m-links">
-    <a onclick="goSection('big')"><span class="no">01</span>大项目</a>
-    <a onclick="goSection('tools')"><span class="no">02</span>工具合集</a>
-    <a onclick="goSection('contact')"><span class="no">03</span>联系</a>
+<nav class="nav">
+  <div class="brand" onclick="go('home')"><span class="dot"></span>谢峰 Xie Feng</div>
+  <div class="nav-links">
+    <a onclick="goSection('big')">大项目</a>
+    <a onclick="goSection('tools')">工具合集</a>
+    <a onclick="goSection('contact')">联系</a>
   </div>
-  <a class="m-cta" href="https://www.linkedin.com/in/xie-feng-4586981b3/" target="_blank" rel="noopener">LINKEDIN ↗</a>
-  <button class="back" onclick="go('home')">← 返回目录</button>
+  <button class="back" onclick="go('home')">‹ 返回</button>
 </nav>
 
 <!-- ============ HOME ============ -->
 <section id="home" class="view active">
   <header class="hero">
-    <div class="kick">AI · BUILD · CURIOSITY</div>
-    <h1>从身边的痛点出发，<br>用 AI 做成<em>能跑起来</em>的产品。</h1>
-    <div class="hero-grid">
-      <div class="h-intro">
-        <img class="h-avatar" src="assets/img/avatar.jpg" alt="谢峰">
-        <p><strong>我是谢峰。</strong>2025 年从 Shopee 离职后，我成了一名独立 AI Builder。我的方法很简单：从身边的痛点出发，找到能用 AI 解决的地方，亲手把它做成一个能跑起来的产品——在实践里拿第一手经验。</p>
-      </div>
-      <dl class="h-meta">
-        <div><dt>NOW</dt><dd>独立 AI Builder</dd></div>
-        <div><dt>BACKGROUND</dt><dd>Shopee 用户增长数据分析 · NUS 硕士</dd></div>
-        <div><dt>FOCUS</dt><dd>AI Agent · 流程自动化 · 从 0 到 1 做产品</dd></div>
-        <div><dt>BASE</dt><dd>新加坡</dd></div>
-        <div><dt>CONTACT</dt><dd><a class="ul" href="https://www.linkedin.com/in/xie-feng-4586981b3/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="ul" href="mailto:xiefengmrx@gmail.com">xiefengmrx@gmail.com</a></dd></div>
-      </dl>
+    <img class="hero-avatar" src="assets/img/avatar.jpg" alt="谢峰">
+    <h1>谢峰 Xie&nbsp;Feng</h1>
+    <div class="role">独立 AI Builder · 用户增长数据分析背景 · Base 新加坡</div>
+    <div class="tagline"><span><span class="b">A</span>I</span><i>·</i><span><span class="b">B</span>uild</span><i>·</i><span><span class="b">C</span>uriosity</span></div>
+    <p class="about">2025 年从 Shopee 离职后，我成了一名独立 AI Builder。<br>
+      我的方法很简单：从身边的痛点出发，找到能用 AI 解决的地方，亲手把它做成一个能跑起来的产品——在实践里拿第一手经验。</p>
+    <div class="chips">
+      <span class="chip">NUS 硕士</span>
+      <span class="chip">用户增长数据分析</span>
+      <span class="chip">AI Agent · 流程自动化</span>
+      <span class="chip">从 0 到 1 做产品</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/xie-feng-4586981b3/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        LinkedIn</a>
+      <a class="btn btn-ghost" href="mailto:xiefengmrx@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+        xiefengmrx@gmail.com</a>
     </div>
   </header>
 
   <!-- big projects -->
-  <div class="sec" id="big">
-    <div class="sec-head"><span class="no">01</span><h2>正在进行的大项目</h2><span class="line"></span></div>
-    <div class="plates">
-      <article class="plate" onclick="go('laoban')">
-        <div class="p-media"><img src="assets/img/laoban/laoban-landing.png" alt="laoban.ai 一人公司的虚拟董事会"></div>
-        <div class="p-body">
-          <h3>laoban.ai · AI 虚拟董事会</h3>
-          <p>给一人公司配一个「不讨好你」的 AI 董事会：盲评、交叉质证，产出带异议记录和止损红线的决策备忘录。</p>
-          <div class="p-foot"><span class="p-tag">🏆 黑客松 Top 30 · Solo</span><span class="p-go">查看项目 <i>→</i></span></div>
+  <div class="section" id="big">
+    <div class="section-head">
+      <div><div class="eyebrow">Featured Work</div><h2>正在进行的大项目</h2></div>
+    </div>
+    <div class="big-grid">
+      <article class="big-card" onclick="go('laoban')">
+        <div class="media cool"><img src="assets/img/laoban/laoban-landing.png" alt="laoban.ai 一人公司的虚拟董事会"></div>
+        <div class="body">
+          <div class="ttl">laoban.ai · AI 虚拟董事会</div>
+          <div class="desc">给一人公司配一个「不讨好你」的 AI 董事会：盲评、交叉质证，产出带异议记录和止损红线的决策备忘录。</div>
+          <div class="foot"><span class="pill">🏆 黑客松 Top 30 · Solo</span><span class="more">查看详情 <span class="arr">→</span></span></div>
         </div>
       </article>
-      <article class="plate" onclick="go('wallpaper')">
-        <div class="p-media"><img src="assets/img/wallpaper/sample5.jpeg" alt="AI 壁纸店铺"></div>
-        <div class="p-body">
-          <h3>AI 壁纸店铺 · HotYume</h3>
-          <p>一条「AI 生成动态壁纸 → 自动发小红书 → 自动发货」的全流程，自己设计、用 AI 搭起来。</p>
-          <div class="p-foot"><span class="p-tag">生成 · 发布 · 运营</span><span class="p-go">查看项目 <i>→</i></span></div>
+      <article class="big-card" onclick="go('wallpaper')">
+        <div class="media warm"><img src="assets/img/wallpaper/sample5.jpeg" alt="壁纸"></div>
+        <div class="body">
+          <div class="ttl">AI 壁纸店铺 · HotYume</div>
+          <div class="desc">一条「AI 生成动态壁纸 → 自动发小红书 → 自动发货」的全流程，自己设计、用 AI 搭起来。</div>
+          <div class="foot"><span class="pill">生成 · 发布 · 运营</span><span class="more">查看详情 <span class="arr">→</span></span></div>
         </div>
       </article>
-      <article class="plate" onclick="go('autobio')">
-        <div class="p-media"><img src="assets/img/autobio/habits.png" alt="AI 数字自传"></div>
-        <div class="p-body">
-          <h3>AI 数字自传</h3>
-          <p>每天自动把备忘录文字 + 相册照片抓回来，整理成图文日记，并在日记之上做一整套数据分析。</p>
-          <div class="p-foot"><span class="p-tag">已积累 460+ 篇</span><span class="p-go">查看项目 <i>→</i></span></div>
+      <article class="big-card" onclick="go('autobio')">
+        <div class="media cool"><img src="assets/img/autobio/habits.png" alt="数字自传"></div>
+        <div class="body">
+          <div class="ttl">AI 数字自传</div>
+          <div class="desc">每天自动把备忘录文字 + 相册照片抓回来，整理成图文日记，并在日记之上做一整套数据分析。</div>
+          <div class="foot"><span class="pill">已积累 460+ 篇</span><span class="more">查看详情 <span class="arr">→</span></span></div>
         </div>
       </article>
     </div>
   </div>
 
   <!-- tools -->
-  <div class="sec" id="tools">
-    <div class="sec-head"><span class="no">02</span><h2>工具合集</h2><span class="line"></span><span class="hint">从自己的痛点做起的小产品</span></div>
-    <div class="idx">
-      <article class="row" onclick="go('hkid')">
-        <span class="r-no">03</span>
-        <div class="r-main"><h3>HKID 预约监测</h3><p>自动盯香港身份证预约名额，有合适的就提醒你。我的第一个 AI 产品，发到小红书免费给大家用。</p></div>
-        <span class="r-tag">macOS + Windows</span>
-        <span class="r-arr">→</span>
+  <div class="section" id="tools">
+    <div class="section-head">
+      <div><div class="eyebrow">Toolbox</div><h2>工具合集</h2></div>
+      <span class="hint">从自己的痛点做起的小产品</span>
+    </div>
+    <div class="tool-grid">
+      <article class="tool-card" onclick="go('hkid')">
+        <div class="ic amber">🔔</div>
+        <div class="ttl">HKID 预约监测</div>
+        <div class="desc">自动盯香港身份证预约名额，有合适的就提醒你。我的第一个 AI 产品，发到小红书免费给大家用。</div>
       </article>
-      <article class="row" onclick="go('harmony')">
-        <span class="r-no">04</span>
-        <div class="r-main"><h3>和声工作台</h3><p>输入歌名，自动分轨、配歌词；放慢 / 循环 / 升降调 / 音高可视化，专为练和声。</p></div>
-        <span class="r-tag">变速 · 移调 · 音高可视化</span>
-        <span class="r-arr">→</span>
+      <article class="tool-card" onclick="go('harmony')">
+        <div class="ic rose">🎵</div>
+        <div class="ttl">和声工作台</div>
+        <div class="desc">输入歌名，自动分轨、配歌词；放慢 / 循环 / 升降调 / 音高可视化，专为练和声。</div>
       </article>
-      <article class="row" onclick="go('livehouse')">
-        <span class="r-no">05</span>
-        <div class="r-main"><h3>Livehouse 点歌系统</h3><p>观众扫码点歌，乐手直达曲谱、主持直达歌词，消灭 openmic 的「舞台真空期」。</p></div>
-        <span class="r-tag">已上线</span>
-        <span class="r-arr">→</span>
+      <article class="tool-card" onclick="go('livehouse')">
+        <div class="ic violet">🎤</div>
+        <div class="ttl">Livehouse 点歌系统</div>
+        <div class="desc">观众扫码点歌，乐手直达曲谱、主持直达歌词，消灭 openmic 的「舞台真空期」。</div>
       </article>
-      <article class="row" onclick="go('resume')">
-        <span class="r-no">06</span>
-        <div class="r-main"><h3>AI 改简历 <span class="tag-dev">开发中</span></h3><p>贴 JD + 传简历，AI 按岗位润色、挑经历，生成可投递 PDF + 面试建议。</p></div>
-        <span class="r-tag">JD 匹配 · PDF</span>
-        <span class="r-arr">→</span>
+      <article class="tool-card" onclick="go('resume')">
+        <div class="ic teal">📄</div>
+        <div class="ttl">AI 改简历 <span class="tag-dev">开发中</span></div>
+        <div class="desc">贴 JD + 传简历，AI 按岗位润色、挑经历，生成可投递 PDF + 面试建议。</div>
       </article>
     </div>
   </div>
 
-  <footer class="foot" id="contact">
-    <div class="kick">03 · CONTACT</div>
-    <h2 class="f-big">找我聊聊<br>AI 与产品。</h2>
-    <div class="f-links">
-      <a class="f-btn solid" href="https://www.linkedin.com/in/xie-feng-4586981b3/" target="_blank" rel="noopener">LINKEDIN ↗</a>
-      <a class="f-btn" href="mailto:xiefengmrx@gmail.com">XIEFENGMRX@GMAIL.COM</a>
+  <footer class="footer" id="contact">
+    <div class="nm">谢峰 Xie Feng</div>
+    <div class="row">独立 AI Builder · 从 0 到 1 做能跑起来的 AI 产品</div>
+    <div class="f-cta">
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/xie-feng-4586981b3/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        LinkedIn</a>
+      <a class="btn btn-ghost" href="mailto:xiefengmrx@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+        xiefengmrx@gmail.com</a>
     </div>
-    <div class="f-base">
-      <span>© 2026 谢峰 XIE FENG</span>
-      <span>站内所有截图与素材均来自我的真实项目</span>
-      <span>SINGAPORE</span>
-    </div>
+    <div class="row copy">© 2026 Xie Feng · 站内所有截图与素材均来自我的真实项目</div>
   </footer>
 </section>
 
@@ -243,7 +235,7 @@
       <h3>已经上线的店铺</h3>
       <p class="lead2">小红书账号 <strong>HotYume.Wallpaper</strong> 已经建立：原创动态壁纸、下单自动发货、私信可定制，还做了版权登记。</p>
       <div class="tags"><span class="t">原创动态壁纸</span><span class="t">自动发货</span><span class="t">海贼 / 火影 / Q 版系列</span></div>
-      <p style="font-family:var(--mono);font-size:11.5px;color:var(--faint);margin:14px 0 0">（ 店铺目前正在升级维护中 ）</p>
+      <p style="font-size:13.5px;color:var(--mut);margin:14px 0 0">🔧 店铺目前正在升级维护中。</p>
     </div>
   </div>
 
@@ -731,7 +723,7 @@
 <!-- lightbox -->
 <div class="lb" id="lb" onclick="this.classList.remove('on')"><img id="lbimg" alt=""></div>
 
-<script src="assets/js/app.js"></script>
+<script src="assets/js/app-apple.js"></script>
 <script src="assets/js/switcher.js"></script>
 </body>
 </html>

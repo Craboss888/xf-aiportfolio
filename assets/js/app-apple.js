@@ -1,4 +1,4 @@
-/* 谢峰 · 作品集 v3 — 路由 + 滚动渐入 + 灯箱 */
+/* 谢峰 · 作品集 — 路由 + 滚动渐入 + 灯箱 */
 const VIEWS = ['home','laoban','wallpaper','autobio','hkid','harmony','livehouse','resume'];
 const PROJECTS = [
   {id:'laoban',    t:'laoban.ai · AI 虚拟董事会', k:'大项目'},
@@ -33,9 +33,9 @@ function render(){
 /* ---- 滚动渐入 ---- */
 function setupReveals(){
   const targets = document.querySelectorAll(
-    '.sec-head, .plate, .idx .row, .foot, ' +
-    '.section-head, .detail-hero, .flow, .block .b-media, .block .b-text, ' +
-    '.stat, .gallery .phone, .brand-row .bcol, .dm, .note, .n-inner'
+    '.section-head, .big-card, .tool-card, .detail-hero, .flow, ' +
+    '.block .b-media, .block .b-text, .stat, .gallery .phone, ' +
+    '.brand-row .bcol, .dm, .note, .pn, .footer'
   );
   // 同一容器内的兄弟元素做级联延迟
   const groups = new Map();
@@ -62,10 +62,10 @@ function setupNextLinks(){
     const sec = document.getElementById(p.id);
     if(!sec) return;
     const wrap = document.createElement('div');
-    wrap.className = 'next';
-    wrap.innerHTML = `<div class="n-inner" onclick="go('${next.id}')">
-      <div><div class="n-lbl">Next — ${next.k}</div><div class="n-tt">${next.t}</div></div>
-      <div class="n-arr">→</div></div>`;
+    wrap.className = 'proj-next';
+    wrap.innerHTML = `<div class="pn" onclick="go('${next.id}')">
+      <div><div class="lbl">下一个项目 · ${next.k}</div><div class="tt">${next.t}</div></div>
+      <div class="arr">→</div></div>`;
     sec.appendChild(wrap);
   });
 }
@@ -76,8 +76,8 @@ window.addEventListener('DOMContentLoaded', () => {
   setupNextLinks();
   setupReveals();
 
-  // 顶栏滚动态
-  const nav = document.querySelector('.mast');
+  // 导航栏滚动态
+  const nav = document.querySelector('.nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
