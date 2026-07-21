@@ -48,24 +48,25 @@ function enterDesktop(fresh){
 }
 
 /* ---------- wallpaper ---------- */
-/* 首位 null=经典 Win98 桌面（#desktop 本底 --teal 即出厂色，壁纸层全淡出）；点击右下角标签手动切换，无自动轮播 */
-var WALLS=[null].concat(['sample4.jpg','sample5.jpeg','sample2.jpg','sample3.jpg','sample6.jpeg','sample1.jpg'].map(function(f){return 'assets/img/wallpaper/'+f}));
+/* 首两位=经典桌面（Win98=无图、#desktop 本底 --teal 即出厂色；XP=自绘 SVG 致敬绿草地，真 Bliss 有版权不可用）；点击右下角标签手动循环，无自动轮播 */
+var WALLS=[{label:'经典 Win98'},{label:'经典 XP',src:'assets/img/wallpaper/xp-bliss.svg'}]
+  .concat(['sample4.jpg','sample5.jpeg','sample2.jpg','sample3.jpg','sample6.jpeg','sample1.jpg'].map(function(f,i){return {label:'HotYume 出品',no:'№'+(i+1),src:'assets/img/wallpaper/'+f}}));
 var wIdx=0,wFront=0,layers=[$('#wallA'),$('#wallB')];
 function setWall(i){
   wIdx=(i+WALLS.length)%WALLS.length;
-  var back=1-wFront;
-  if(WALLS[wIdx]){
-    layers[back].style.backgroundImage='url("'+WALLS[wIdx].replace(/"/g,'%22')+'")';
+  var w=WALLS[wIdx],back=1-wFront;
+  if(w.src){
+    layers[back].style.backgroundImage='url("'+w.src.replace(/"/g,'%22')+'")';
     layers[back].classList.add('on');layers[wFront].classList.remove('on');
     wFront=back;
   }else{
     layers[0].classList.remove('on');layers[1].classList.remove('on');
   }
-  $('#wallBrand').textContent=WALLS[wIdx]?'HotYume 出品':'经典 Win98';
-  $('#wallNo').textContent=WALLS[wIdx]?'№'+wIdx:'';
+  $('#wallBrand').textContent=w.label;
+  $('#wallNo').textContent=w.no||'';
 }
 function startWall(){
-  WALLS.forEach(function(u){if(u){var im=new Image();im.src=u}});
+  WALLS.forEach(function(w){if(w.src){var im=new Image();im.src=w.src}});
   setWall(0);
 }
 $('#wallTag').addEventListener('click',function(){setWall(wIdx+1)});
