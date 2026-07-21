@@ -76,6 +76,14 @@
           <div class="foot"><span class="pill">已积累 460+ 篇</span><span class="more">查看详情 <span class="arr">→</span></span></div>
         </div>
       </article>
+      <article class="big-card" onclick="go('radar')">
+        <div class="media warm"><img src="assets/img/radar/list.png" alt="岗位雷达：AI 逐岗拆解打分的求职情报站"></div>
+        <div class="body">
+          <div class="ttl">岗位雷达</div>
+          <div class="desc">每天 8 点自动抓完 8 个渠道的新岗位，AI 逐个拆解打分，Top 10 推送到手机——刷招聘网站这件事，外包给 AI。</div>
+          <div class="foot"><span class="pill">每天 08:00 自动运行</span><span class="more">查看详情 <span class="arr">→</span></span></div>
+        </div>
+      </article>
     </div>
   </div>
 
@@ -717,6 +725,85 @@
     </div>
   </div>
 
+  <div style="height:30px"></div>
+</section>
+
+<!-- ============ RADAR ============ -->
+<section id="radar" class="view detail">
+  <div class="detail-hero">
+    <div class="kicker">大项目 · 每天自动运行</div>
+    <h1>岗位雷达</h1>
+    <p class="lead">找工作季最耗人的事，是天天刷招聘网站。我干脆做了一个「雷达」：每天早上 8 点自动抓完 8 个渠道的新岗位，AI 逐个拆解打分，把最值得投的推到我手机上——我只负责决定投不投。</p>
+    <div class="meta-row"><span class="t gray">launchd 定时</span><span class="t gray">8 渠道抓取</span><span class="t gray">LLM 拆解打分</span><span class="t gray">SQLite</span><span class="t gray">Telegram 推送</span></div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow">
+      <svg viewBox="0 0 516 206" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="岗位雷达链路：抓取、过滤、AI 拆解、推送">
+        <defs>
+          <marker id="ar-radar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0L10 5L0 10z" fill="#c2c2c8"/>
+          </marker>
+        </defs>
+        <g font-family="-apple-system,'PingFang SC',sans-serif">
+          <rect x="118" y="16" width="280" height="32" rx="9" fill="#e3f1ec"/>
+          <text x="258" y="37" text-anchor="middle" font-size="13" font-weight="600" fill="#0f6e56">每天 08:00 · 全程无人值守</text>
+
+          <rect x="16" y="74" width="112" height="56" rx="11" fill="#fff" stroke="#e2e2e6"/>
+          <text x="72" y="97" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1d1d1f">8 渠道抓取</text>
+          <text x="72" y="114" text-anchor="middle" font-size="10" fill="#86868b">57 家公司官网+聚合板</text>
+          <rect x="144" y="74" width="104" height="56" rx="11" fill="#fff" stroke="#e2e2e6"/>
+          <text x="196" y="97" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1d1d1f">规则过滤</text>
+          <text x="196" y="114" text-anchor="middle" font-size="10" fill="#86868b">级别 / 语言 / AI 相关</text>
+          <rect x="264" y="74" width="112" height="56" rx="11" fill="#eef5fd" stroke="#cfe0f4"/>
+          <text x="320" y="97" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1d1d1f">AI 拆解打分</text>
+          <text x="320" y="114" text-anchor="middle" font-size="10" fill="#86868b">匹配度 · 亮点 · 风险</text>
+          <rect x="392" y="74" width="108" height="56" rx="11" fill="#1d1d1f"/>
+          <text x="446" y="97" text-anchor="middle" font-size="12.5" font-weight="600" fill="#fff">推送 + 看板</text>
+          <text x="446" y="114" text-anchor="middle" font-size="10" fill="#cfcfcf">Telegram Top10</text>
+
+          <line x1="128" y1="102" x2="144" y2="102" stroke="#c2c2c8" stroke-width="1.6" marker-end="url(#ar-radar)"/>
+          <line x1="248" y1="102" x2="264" y2="102" stroke="#c2c2c8" stroke-width="1.6" marker-end="url(#ar-radar)"/>
+          <line x1="376" y1="102" x2="392" y2="102" stroke="#c2c2c8" stroke-width="1.6" marker-end="url(#ar-radar)"/>
+
+          <text x="258" y="162" text-anchor="middle" font-size="11.5" fill="#86868b">每天抓回上百个岗位，走完这条流水线后，真正需要我看的只剩十几个</text>
+          <text x="258" y="184" text-anchor="middle" font-size="11.5" fill="#86868b">我唯一要做的事：看推送，点「投」</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="b-media"><div class="browser"><div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span class="u">岗位雷达 · 今日视图</span></div><img class="zoomable" src="assets/img/radar/list.png" data-full="assets/img/radar/list.png" alt="岗位雷达今日视图：带匹配分的岗位列表"></div></div>
+    <div class="b-text">
+      <h3>每天 8 点，它替我把板子刷完</h3>
+      <p class="lead2">57 家目标公司的官网招聘页<strong>直连抓取</strong>，加上 MCF、RemoteOK 这些聚合板，一共 8 个渠道。抓回来先过硬规则——级别不符、语言不通、地区不对的直接扔，再按「和 AI 沾不沾边」分级排序。</p>
+      <div class="tags"><span class="t">公司官网 ATS 直连</span><span class="t">硬规则排除</span><span class="t">AI 相关性分级</span></div>
+    </div>
+  </div>
+
+  <div class="block reverse">
+    <div class="b-media"><div class="browser"><div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span class="u">岗位拆解 · 为什么适合我</span></div><img class="zoomable" src="assets/img/radar/detail.png" data-full="assets/img/radar/detail.png" alt="岗位拆解详情：公司概况、岗位概况、为什么适合我"></div></div>
+    <div class="b-text">
+      <h3>AI 拿着我的「档案卡」逐个打分</h3>
+      <p class="lead2">我把自己的背景、强项、红线写成一张<strong>档案卡</strong>，AI 拿着它读每个岗位的 JD：打匹配分、写「为什么适合我」、标出风险。低分岗位自动归档，注意力只花在值得的岗位上。</p>
+      <div class="tags"><span class="t">匹配度评分</span><span class="t">亮点与风险</span><span class="t">低分自动忽略</span></div>
+    </div>
+  </div>
+
+  <div class="block wide">
+    <div class="b-text">
+      <h3>从「看到」到「投完」的闭环</h3>
+      <p class="lead2">Telegram 每天把 Top 10 推到手机；看板上看中、已投、忽略一键流转，忽略必须写原因——这些反馈会让雷达的口味越来越像我。</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">8<small> 个</small></div><div class="l">渠道每日自动抓取</div></div>
+    <div class="stat"><div class="n">57<small> 家</small></div><div class="l">目标公司官网直连</div></div>
+    <div class="stat"><div class="n">08:00</div><div class="l">每天准时自动开工</div></div>
+    <div class="stat"><div class="n">Top 10</div><div class="l">Telegram 每日推送</div></div>
+  </div>
   <div style="height:30px"></div>
 </section>
 

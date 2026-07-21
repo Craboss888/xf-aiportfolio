@@ -1,9 +1,10 @@
 /* 谢峰 · 作品集 v3 — 路由 + 滚动渐入 + 灯箱 */
-const VIEWS = ['home','laoban','wallpaper','autobio','hkid','harmony','livehouse','resume'];
+const VIEWS = ['home','laoban','wallpaper','autobio','radar','hkid','harmony','livehouse','resume'];
 const PROJECTS = [
   {id:'laoban',    t:'laoban.ai · AI 虚拟董事会', k:'大项目'},
   {id:'wallpaper', t:'AI 壁纸店铺 · HotYume', k:'大项目'},
   {id:'autobio',   t:'AI 数字自传',           k:'大项目'},
+  {id:'radar',     t:'岗位雷达',              k:'大项目'},
   {id:'hkid',      t:'HKID 预约监测',         k:'工具'},
   {id:'harmony',   t:'和声工作台',            k:'工具'},
   {id:'livehouse', t:'Livehouse 点歌系统',    k:'工具'},
