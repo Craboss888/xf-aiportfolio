@@ -48,22 +48,27 @@ function enterDesktop(fresh){
 }
 
 /* ---------- wallpaper ---------- */
-var WALLS=['sample4.jpg','sample5.jpeg','sample2.jpg','sample3.jpg','sample6.jpeg','sample1.jpg'].map(function(f){return 'assets/img/wallpaper/'+f});
-var wIdx=0,wFront=0,wTimer=null,layers=[$('#wallA'),$('#wallB')];
+/* 首位 null=经典 Win98 桌面（#desktop 本底 --teal 即出厂色，壁纸层全淡出）；点击右下角标签手动切换，无自动轮播 */
+var WALLS=[null].concat(['sample4.jpg','sample5.jpeg','sample2.jpg','sample3.jpg','sample6.jpeg','sample1.jpg'].map(function(f){return 'assets/img/wallpaper/'+f}));
+var wIdx=0,wFront=0,layers=[$('#wallA'),$('#wallB')];
 function setWall(i){
   wIdx=(i+WALLS.length)%WALLS.length;
   var back=1-wFront;
-  layers[back].style.backgroundImage='url("'+WALLS[wIdx].replace(/"/g,'%22')+'")';
-  layers[back].classList.add('on');layers[wFront].classList.remove('on');
-  wFront=back;
-  $('#wallNo').textContent='№'+(wIdx+1);
+  if(WALLS[wIdx]){
+    layers[back].style.backgroundImage='url("'+WALLS[wIdx].replace(/"/g,'%22')+'")';
+    layers[back].classList.add('on');layers[wFront].classList.remove('on');
+    wFront=back;
+  }else{
+    layers[0].classList.remove('on');layers[1].classList.remove('on');
+  }
+  $('#wallBrand').textContent=WALLS[wIdx]?'HotYume 出品':'经典 Win98';
+  $('#wallNo').textContent=WALLS[wIdx]?'№'+wIdx:'';
 }
 function startWall(){
-  WALLS.forEach(function(u){var im=new Image();im.src=u});
+  WALLS.forEach(function(u){if(u){var im=new Image();im.src=u}});
   setWall(0);
-  wTimer=setInterval(function(){setWall(wIdx+1)},10000);
 }
-$('#wallTag').addEventListener('click',function(){clearInterval(wTimer);setWall(wIdx+1);wTimer=setInterval(function(){setWall(wIdx+1)},10000)});
+$('#wallTag').addEventListener('click',function(){setWall(wIdx+1)});
 
 /* ---------- window manager ---------- */
 var zTop=10,openSeq=0,taskBtns={};
