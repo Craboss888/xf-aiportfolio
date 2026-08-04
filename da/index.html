@@ -182,40 +182,39 @@
       <h2>机制假设：广告打到了不该打的人</h2>
       <p class="b-text">从广告机制出发提出假设：<b>广告触达了大量非目标的活跃用户</b>。根源在离线人群包的工作机制——快照式打包传输，平台还要消化两三天才开始投放，<b>人群状态天然滞后于投放时刻</b>。</p>
       <figure>
-        <svg viewBox="0 0 760 300" width="100%" role="img" aria-label="离线人群包机制图">
-          <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
-          <!-- pipeline -->
-          <rect x="16" y="36" width="166" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
-          <text x="99" y="62" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">① Shopee 后台打包</text>
-          <text x="99" y="84" text-anchor="middle" font-size="12" fill="#86868b">按画像圈选</text>
-          <text x="99" y="102" text-anchor="middle" font-size="12" fill="#86868b">非活跃人群 → 人群包</text>
-          <line x1="188" y1="76" x2="212" y2="76" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
-          <rect x="220" y="36" width="150" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
-          <text x="295" y="66" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">② 传输给广告平台</text>
-          <text x="295" y="90" text-anchor="middle" font-size="12" fill="#86868b">离线文件 · 一次性快照</text>
-          <line x1="376" y1="76" x2="400" y2="76" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
-          <rect x="408" y="36" width="160" height="80" rx="13" fill="#fffbf0" stroke="#d9a406" stroke-width="1.5"/>
-          <text x="488" y="62" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">③ 平台消化入库</text>
-          <text x="488" y="84" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b28704">需 T + 2–3 天</text>
-          <text x="488" y="102" text-anchor="middle" font-size="12" fill="#86868b">才能开始生效</text>
-          <line x1="574" y1="76" x2="598" y2="76" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
-          <rect x="606" y="36" width="138" height="80" rx="13" fill="#fffbf0" stroke="#d9a406" stroke-width="1.5"/>
-          <text x="675" y="66" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">④ 按包定向投放</text>
-          <text x="675" y="90" text-anchor="middle" font-size="12" fill="#86868b">渠道执行触达</text>
+        <svg viewBox="0 0 760 244" width="100%" role="img" aria-label="离线人群包机制图">
+          <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker>
+          <marker id="ar2r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e8590c"/></marker></defs>
+          <!-- pipeline: 4 uniform boxes 160x84, gap 32 -->
+          <rect x="12" y="20" width="160" height="84" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="92" y="50" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">① Shopee 后台打包</text>
+          <text x="92" y="72" text-anchor="middle" font-size="12" fill="#86868b">按画像圈选</text>
+          <text x="92" y="90" text-anchor="middle" font-size="12" fill="#86868b">非活跃人群 → 人群包</text>
+          <line x1="176" y1="62" x2="198" y2="62" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <rect x="204" y="20" width="160" height="84" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="284" y="50" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">② 传输给广告平台</text>
+          <text x="284" y="76" text-anchor="middle" font-size="12" fill="#86868b">离线文件 · 一次性快照</text>
+          <line x1="368" y1="62" x2="390" y2="62" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <rect x="396" y="20" width="160" height="84" rx="13" fill="#fffbf0" stroke="#d9a406" stroke-width="1.5"/>
+          <text x="476" y="50" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">③ 平台消化入库</text>
+          <text x="476" y="72" text-anchor="middle" font-size="12" font-weight="600" fill="#b28704">需 T + 2–3 天</text>
+          <text x="476" y="90" text-anchor="middle" font-size="12" fill="#86868b">才能开始生效</text>
+          <line x1="560" y1="62" x2="582" y2="62" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <rect x="588" y="20" width="160" height="84" rx="13" fill="#fffbf0" stroke="#d9a406" stroke-width="1.5"/>
+          <text x="668" y="50" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">④ 按包定向投放</text>
+          <text x="668" y="76" text-anchor="middle" font-size="12" fill="#86868b">渠道执行触达</text>
           <!-- risk arrows -->
-          <line x1="488" y1="120" x2="488" y2="152" stroke="#e8590c" stroke-width="1.5" marker-end="url(#ar2)"/>
-          <line x1="675" y1="120" x2="675" y2="152" stroke="#e8590c" stroke-width="1.5" marker-end="url(#ar2)"/>
-          <!-- risk boxes -->
-          <rect x="348" y="160" width="220" height="76" rx="12" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
-          <text x="458" y="186" text-anchor="middle" font-size="13" font-weight="650" fill="#e8590c">风险 ①：时效性偏移</text>
-          <text x="458" y="208" text-anchor="middle" font-size="12" fill="#515154">打包后数天，部分用户已</text>
-          <text x="458" y="226" text-anchor="middle" font-size="12" fill="#515154">从「非活跃」变回「活跃」</text>
-          <rect x="584" y="160" width="160" height="76" rx="12" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
-          <text x="664" y="186" text-anchor="middle" font-size="13" font-weight="650" fill="#e8590c">风险 ②：执行偏离</text>
-          <text x="664" y="208" text-anchor="middle" font-size="12" fill="#515154">渠道方（尤其小型 Agency）</text>
-          <text x="664" y="226" text-anchor="middle" font-size="12" fill="#515154">可能不按人群包规则触达</text>
-          <!-- cpc footnote -->
-          <text x="16" y="276" font-size="12" fill="#86868b">※ 叠加因素：CPC 计费下，渠道方亦有扩量投放的动机——点击越多、收入越多</text>
+          <line x1="476" y1="108" x2="476" y2="136" stroke="#e8590c" stroke-width="1.5" marker-end="url(#ar2r)"/>
+          <line x1="668" y1="108" x2="668" y2="136" stroke="#e8590c" stroke-width="1.5" marker-end="url(#ar2r)"/>
+          <!-- risk boxes: uniform 180x84, centered under ③④ -->
+          <rect x="386" y="144" width="180" height="84" rx="13" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
+          <text x="476" y="172" text-anchor="middle" font-size="13.5" font-weight="650" fill="#e8590c">风险 ①：时效性偏移</text>
+          <text x="476" y="194" text-anchor="middle" font-size="12" fill="#515154">打包后数天，部分用户已</text>
+          <text x="476" y="212" text-anchor="middle" font-size="12" fill="#515154">从「非活跃」变回「活跃」</text>
+          <rect x="578" y="144" width="180" height="84" rx="13" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
+          <text x="668" y="172" text-anchor="middle" font-size="13.5" font-weight="650" fill="#e8590c">风险 ②：执行偏离</text>
+          <text x="668" y="194" text-anchor="middle" font-size="12" fill="#515154">渠道方（尤其小型 Agency）</text>
+          <text x="668" y="212" text-anchor="middle" font-size="12" fill="#515154">可能不按人群包规则触达</text>
         </svg>
         <figcaption>离线人群包的完整链路</figcaption>
       </figure>
