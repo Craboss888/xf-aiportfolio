@@ -409,28 +409,60 @@
     <div class="block">
       <div class="b-kicker">03 · Validation</div>
       <h2>双重验证：先证「找对了人」，再证「有增量」</h2>
-      <p class="b-text">第一层：与本地运营的收入及购物意愿问卷交叉验证，预测池与真实高净值池重合 <b>90%+</b>。第二层：A/B 实验——两组给完全相同的激励、避开大促窗口，实验组 GMV uplift <b>+20%（显著）</b>。</p>
+      <p class="b-text">第一层：与本地运营收集的收入及购物意愿问卷交叉验证，预测池与真实高净值池重合 <b>90%+</b>。</p>
       <figure>
-        <svg viewBox="0 0 760 232" width="100%" role="img" aria-label="实验设计">
-          <defs><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
-          <rect x="16" y="20" width="200" height="84" rx="13" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
-          <text x="116" y="52" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">实验组</text>
-          <text x="116" y="76" text-anchor="middle" font-size="12" fill="#86868b">模型预测的潜力用户</text>
-          <rect x="16" y="128" width="200" height="84" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
-          <text x="116" y="160" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">控制组</text>
-          <text x="116" y="184" text-anchor="middle" font-size="12" fill="#86868b">全量用户随机抽样</text>
-          <line x1="220" y1="62" x2="272" y2="100" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
-          <line x1="220" y1="170" x2="272" y2="132" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
-          <rect x="276" y="64" width="220" height="104" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
-          <text x="386" y="96" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">完全相同的激励</text>
-          <text x="386" y="122" text-anchor="middle" font-size="12" fill="#86868b">同一组优惠券 · 站内信 · 推送</text>
-          <text x="386" y="140" text-anchor="middle" font-size="12" fill="#86868b">避开大促窗口</text>
-          <line x1="500" y1="116" x2="552" y2="116" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
-          <rect x="560" y="72" width="184" height="88" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
-          <text x="652" y="106" text-anchor="middle" font-size="14" font-weight="650" fill="#1d9a5b">GMV Uplift +20%</text>
-          <text x="652" y="130" text-anchor="middle" font-size="12" fill="#515154">实验组显著高于控制组</text>
+        <svg viewBox="0 0 760 230" width="100%" role="img" aria-label="问卷交叉验证">
+          <circle cx="310" cy="115" r="80" fill="rgba(0,113,227,.07)" stroke="#0071e3" stroke-width="1.5"/>
+          <circle cx="350" cy="115" r="80" fill="rgba(29,154,91,.07)" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="218" y="108" text-anchor="end" font-size="13.5" font-weight="600" fill="#0071e3">模型预测池</text>
+          <text x="218" y="128" text-anchor="end" font-size="11.5" fill="#86868b">行为打分</text>
+          <text x="442" y="108" font-size="13.5" font-weight="600" fill="#1d9a5b">问卷判定池</text>
+          <text x="442" y="128" font-size="11.5" fill="#86868b">ground truth</text>
+          <text x="330" y="110" text-anchor="middle" font-size="15" font-weight="650" fill="#1d1d1f">90%+</text>
+          <text x="330" y="130" text-anchor="middle" font-size="11.5" fill="#515154">重合</text>
+          <text x="570" y="102" font-size="12" fill="#86868b">问卷：本地运营团队收集</text>
+          <text x="570" y="122" font-size="12" fill="#86868b">测量收入与在线购物意愿</text>
         </svg>
-        <figcaption>实验设计</figcaption>
+        <figcaption>问卷交叉验证</figcaption>
+      </figure>
+      <p class="b-text" style="margin-top:20px">第二层：A/B 实验。<b>两组内部各随机分半</b>——一半发同一组激励（优惠券 · 站内信 · 推送）、一半不发，先在组内算出各自的因果 uplift，再做组间对比；窗口避开大促。结果：<b>实验组 uplift 显著高于控制组（+20%）</b>。</p>
+      <figure>
+        <svg viewBox="0 0 760 300" width="100%" role="img" aria-label="实验设计">
+          <defs><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <!-- exp container -->
+          <rect x="16" y="20" width="344" height="118" rx="13" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
+          <text x="188" y="46" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">实验组 · 模型预测的潜力用户</text>
+          <text x="188" y="64" text-anchor="middle" font-size="11.5" fill="#86868b">组内 50 / 50 随机</text>
+          <rect x="32" y="76" width="150" height="46" rx="10" fill="#f0f7ff" stroke="#0071e3" stroke-width="1.2"/>
+          <text x="107" y="104" text-anchor="middle" font-size="13" font-weight="600" fill="#1d1d1f">发激励</text>
+          <rect x="194" y="76" width="150" height="46" rx="10" fill="#f5f5f7" stroke="#d2d2d7" stroke-width="1.2"/>
+          <text x="269" y="104" text-anchor="middle" font-size="13" font-weight="600" fill="#515154">不发激励</text>
+          <!-- ctrl container -->
+          <rect x="16" y="164" width="344" height="118" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="188" y="190" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">控制组 · 全量用户随机抽样</text>
+          <text x="188" y="208" text-anchor="middle" font-size="11.5" fill="#86868b">组内 50 / 50 随机</text>
+          <rect x="32" y="220" width="150" height="46" rx="10" fill="#f0f7ff" stroke="#0071e3" stroke-width="1.2"/>
+          <text x="107" y="248" text-anchor="middle" font-size="13" font-weight="600" fill="#1d1d1f">发激励</text>
+          <rect x="194" y="220" width="150" height="46" rx="10" fill="#f5f5f7" stroke="#d2d2d7" stroke-width="1.2"/>
+          <text x="269" y="248" text-anchor="middle" font-size="13" font-weight="600" fill="#515154">不发激励</text>
+          <!-- uplift chips -->
+          <line x1="364" y1="79" x2="392" y2="90" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
+          <rect x="398" y="68" width="146" height="56" rx="12" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="471" y="92" text-anchor="middle" font-size="13.5" font-weight="650" fill="#1d1d1f">Uplift ①</text>
+          <text x="471" y="112" text-anchor="middle" font-size="11.5" fill="#86868b">发 − 不发</text>
+          <line x1="364" y1="223" x2="392" y2="212" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
+          <rect x="398" y="178" width="146" height="56" rx="12" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="471" y="202" text-anchor="middle" font-size="13.5" font-weight="650" fill="#1d1d1f">Uplift ②</text>
+          <text x="471" y="222" text-anchor="middle" font-size="11.5" fill="#86868b">发 − 不发</text>
+          <!-- compare -->
+          <line x1="548" y1="96" x2="588" y2="128" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
+          <line x1="548" y1="206" x2="588" y2="174" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
+          <rect x="592" y="106" width="152" height="90" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="668" y="136" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">组间对比</text>
+          <text x="668" y="158" text-anchor="middle" font-size="13.5" font-weight="650" fill="#1d9a5b">Uplift ① &gt; Uplift ②</text>
+          <text x="668" y="180" text-anchor="middle" font-size="12" fill="#515154">+20% · 显著</text>
+        </svg>
+        <figcaption>实验设计：组内随机定因果，组间对比验模型</figcaption>
       </figure>
     </div>
 
