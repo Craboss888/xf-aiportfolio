@@ -119,7 +119,7 @@
 
     <div class="block">
       <div class="b-kicker">00 · Background</div>
-      <h2>背景：一个「召回沉睡用户」的渠道亮了红灯</h2>
+      <h2>背景：一个 Retargeting 渠道 ROI 突然下降</h2>
       <p class="b-text">重定向（Retargeting）广告面向<b>近期不活跃的老用户</b>，目标是把他们召回下单——站外投流里转化效率最高的一类。异常出现：某个重定向渠道的 ROI（GMV / Cost）<b>持续低于历史基线</b>，而预算还在照常消耗。</p>
       <figure>
         <svg viewBox="0 0 760 210" width="100%" role="img" aria-label="背景图">
@@ -145,7 +145,6 @@
           <polyline points="430,82 490,88 540,104 590,128 660,142 720,146" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/>
           <text x="660" y="128" text-anchor="middle" font-size="12.5" font-weight="600" fill="#e8590c">ROI ↓ 预算照常消耗</text>
         </svg>
-        <figcaption>转化效率最高的召回渠道，却持续跑在基线之下——需要一个解释</figcaption>
       </figure>
     </div>
 
@@ -200,21 +199,25 @@
           <text x="488" y="84" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b28704">需 T + 2–3 天</text>
           <text x="488" y="102" text-anchor="middle" font-size="12" fill="#86868b">才能开始生效</text>
           <line x1="574" y1="76" x2="598" y2="76" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
-          <rect x="606" y="36" width="138" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <rect x="606" y="36" width="138" height="80" rx="13" fill="#fffbf0" stroke="#d9a406" stroke-width="1.5"/>
           <text x="675" y="66" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">④ 按包定向投放</text>
-          <text x="675" y="90" text-anchor="middle" font-size="12" fill="#86868b">对着过期快照投</text>
-          <!-- time axis -->
-          <line x1="16" y1="140" x2="744" y2="140" stroke="#d2d2d7" stroke-width="1.2"/>
-          <text x="99" y="160" text-anchor="middle" font-size="11.5" fill="#86868b">T 日：打包时「非活跃」✓</text>
-          <text x="675" y="160" text-anchor="middle" font-size="11.5" fill="#86868b">T+3 日起：开始投放</text>
-          <!-- drift note -->
-          <rect x="16" y="182" width="728" height="62" rx="12" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
-          <text x="380" y="208" text-anchor="middle" font-size="13.5" font-weight="600" fill="#e8590c">快照滞后：这几天里，部分用户已从「非活跃」变回「活跃」</text>
-          <text x="380" y="230" text-anchor="middle" font-size="12.5" fill="#515154">投放对象 ≠ 目标人群 → 活跃用户点击 ↑ 却无转化资格 → 转化 ↓ · ROI ↓</text>
+          <text x="675" y="90" text-anchor="middle" font-size="12" fill="#86868b">渠道执行触达</text>
+          <!-- risk arrows -->
+          <line x1="488" y1="120" x2="488" y2="152" stroke="#e8590c" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <line x1="675" y1="120" x2="675" y2="152" stroke="#e8590c" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <!-- risk boxes -->
+          <rect x="348" y="160" width="220" height="76" rx="12" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
+          <text x="458" y="186" text-anchor="middle" font-size="13" font-weight="650" fill="#e8590c">风险 ①：时效性偏移</text>
+          <text x="458" y="208" text-anchor="middle" font-size="12" fill="#515154">打包后数天，部分用户已</text>
+          <text x="458" y="226" text-anchor="middle" font-size="12" fill="#515154">从「非活跃」变回「活跃」</text>
+          <rect x="584" y="160" width="160" height="76" rx="12" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
+          <text x="664" y="186" text-anchor="middle" font-size="13" font-weight="650" fill="#e8590c">风险 ②：执行偏离</text>
+          <text x="664" y="208" text-anchor="middle" font-size="12" fill="#515154">渠道方（尤其小型 Agency）</text>
+          <text x="664" y="226" text-anchor="middle" font-size="12" fill="#515154">可能不按人群包规则触达</text>
           <!-- cpc footnote -->
-          <text x="16" y="280" font-size="12" fill="#86868b">※ 叠加因素：CPC 计费下，平台亦有扩量投放的动机——点击越多、平台收入越多</text>
+          <text x="16" y="276" font-size="12" fill="#86868b">※ 叠加因素：CPC 计费下，渠道方亦有扩量投放的动机——点击越多、收入越多</text>
         </svg>
-        <figcaption>离线人群包的完整链路：从打包到生效隔了两三天，人群状态早已漂移</figcaption>
+        <figcaption>离线人群包的完整链路</figcaption>
       </figure>
     </div>
 
@@ -291,7 +294,12 @@
     <div class="block role-card">
       <div class="b-kicker">My Role</div>
       <h2>我的核心贡献</h2>
-      <p class="b-text">① 从 ROI 异常出发，通过漏斗拆解与业务理解提出「平台扩量」根因假设；② 设计精准度指标并完成数据验证，把假设证明成事实；③ 为短期修正与长期 RTA 方案持续提供数据支持与效果验收。方案执行由平台与产品团队主导，但<b>前置的诊断与验证是所有后续动作的依据</b>。</p>
+      <ul class="b-list">
+        <li>① 从 ROI 异常出发，通过漏斗拆解与业务理解提出「平台扩量」根因假设</li>
+        <li>② 设计精准度指标并完成数据验证，把假设证明成事实</li>
+        <li>③ 为短期修正与长期 RTA 方案持续提供数据支持与效果验收</li>
+      </ul>
+      <p class="b-text">方案执行由平台与产品团队主导，但<b>前置的诊断与验证是所有后续动作的依据</b>。</p>
     </div>
 
     <div class="next"><a onclick="go('ses')">下一个项目：高净值用户预测 →</a></div>
