@@ -310,7 +310,7 @@
     <div class="d-head">
       <div class="tags"><span class="tag">预测建模</span><span class="tag">A/B 实验</span><span class="tag">精准营销</span></div>
       <h1>高净值用户预测与精准营销</h1>
-      <p class="d-sub">PH 市场 GMV 增长乏力、营销预算有限。我用画像与行为信号建模预测「有购买力但尚未发力」的潜力用户，经问卷与 A/B 实验双重验证后分批推广，并将方法论复用到其他市场。</p>
+      <p class="d-sub">PH 市场 GMV 增长乏力、营销预算有限。我建模预测「有购买力但尚未发力」的潜力用户，经问卷与 A/B 实验双重验证后分批推广，方法论复用至其他市场。</p>
       <div class="d-meta">Shopee · PH 市场 · 2023.06 – 2023.08</div>
       <div class="stat-row">
         <div class="stat"><div class="n">+20%</div><div class="l">实验组 GMV uplift（显著）</div></div>
@@ -320,32 +320,152 @@
     </div>
 
     <div class="block">
-      <div class="b-kicker">Approach</div>
-      <h2>从业务框架到实验验证</h2>
-      <p class="b-text">GMV = 用户数 × 付费率 × 频次 × 客单价。拉新、付费率、频次三条杠杆在 PH 已趋饱和，剩余空间在「客单价与针对性」——目标不是找已经高消费的用户，而是<b>预测有潜力但未发力的用户</b>，把有限预算投给增量。</p>
+      <div class="b-kicker">00 · Background</div>
+      <h2>背景：GMV 的四条杠杆，三条已饱和</h2>
+      <p class="b-text">PH 市场 GMV 增长乏力，年度方向是在转化侧做提升，而营销预算有限。用 GMV = 用户数 × 付费率 × 频次 × 客单价 盘点杠杆：前三条已趋饱和，<b>机会在客单价与投放针对性</b>。</p>
       <figure>
-        <svg viewBox="0 0 760 190" width="100%" role="img" aria-label="项目流程图">
-          <defs><marker id="ar4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
-          <rect x="16" y="40" width="160" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
-          <text x="96" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">预测建模</text>
-          <text x="96" y="94" text-anchor="middle" font-size="12" fill="#86868b">画像 + 购买行为信号</text>
-          <line x1="182" y1="80" x2="212" y2="80" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar4)"/>
-          <rect x="220" y="40" width="160" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
-          <text x="300" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">问卷验证</text>
-          <text x="300" y="94" text-anchor="middle" font-size="12" fill="#1d9a5b">与真实高净值池重合 90%+</text>
-          <line x1="386" y1="80" x2="416" y2="80" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar4)"/>
-          <rect x="424" y="40" width="160" height="80" rx="13" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
-          <text x="504" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">A/B 实验</text>
-          <text x="504" y="94" text-anchor="middle" font-size="12" fill="#0071e3">同等激励 · GMV +20%</text>
-          <line x1="590" y1="80" x2="620" y2="80" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar4)"/>
-          <rect x="628" y="40" width="116" height="80" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
-          <text x="686" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">多市场推广</text>
-          <text x="686" y="94" text-anchor="middle" font-size="12" fill="#1d9a5b">框架复用·分市场重训</text>
-          <text x="380" y="160" text-anchor="middle" font-size="13" fill="#86868b">特征两类：用户画像（设备档位 / 地区 / 年龄）＋ 购买行为（Mall 订单 / 品类广度 / 支付方式 / 收藏价位）</text>
+        <svg viewBox="0 0 760 132" width="100%" role="img" aria-label="GMV 四因子盘点">
+          <rect x="12" y="20" width="160" height="96" rx="13" fill="#f5f5f7" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="92" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#515154">用户数（拉新）</text>
+          <text x="92" y="72" text-anchor="middle" font-size="12" fill="#86868b">获客成本走高</text>
+          <text x="92" y="90" text-anchor="middle" font-size="12" fill="#86868b">已饱和</text>
+          <text x="188" y="74" text-anchor="middle" font-size="16" font-weight="600" fill="#86868b">×</text>
+          <rect x="204" y="20" width="160" height="96" rx="13" fill="#f5f5f7" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="284" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#515154">付费率（转化）</text>
+          <text x="284" y="72" text-anchor="middle" font-size="12" fill="#86868b">新手激励成熟</text>
+          <text x="284" y="90" text-anchor="middle" font-size="12" fill="#86868b">已饱和</text>
+          <text x="380" y="74" text-anchor="middle" font-size="16" font-weight="600" fill="#86868b">×</text>
+          <rect x="396" y="20" width="160" height="96" rx="13" fill="#f5f5f7" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="476" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#515154">频次（复购）</text>
+          <text x="476" y="72" text-anchor="middle" font-size="12" fill="#86868b">签到 · 积分体系完善</text>
+          <text x="476" y="90" text-anchor="middle" font-size="12" fill="#86868b">已饱和</text>
+          <text x="572" y="74" text-anchor="middle" font-size="16" font-weight="600" fill="#86868b">×</text>
+          <rect x="588" y="20" width="160" height="96" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="668" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">客单价（针对性）</text>
+          <text x="668" y="72" text-anchor="middle" font-size="12" fill="#515154">高购买力人群未被挖掘</text>
+          <text x="668" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#1d9a5b">机会所在</text>
         </svg>
-        <figcaption>预测 → 双重验证 → 实验证明增量 → 规模化推广</figcaption>
+        <figcaption>GMV 增长杠杆盘点</figcaption>
       </figure>
-      <p class="b-text" style="margin-top:18px">推广至其他市场时坚持<b>「复用方法论、每个市场重新训练」</b>——特征分布与用户行为因市场而异，直接迁移模型不可靠。我负责向各市场 BI 团队培训方法论、提供 PH 代码模板与特征工程支持。</p>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">01 · Target Definition</div>
+      <h2>目标定义：预测「潜力」，不是圈「存量」</h2>
+      <p class="b-text">不找「已经在买」的人——给不给激励他们都会买，增量有限。目标是<b>有购买力、有购物意愿、但当前消费未达顶部</b>的用户，这才是增量空间。</p>
+      <figure>
+        <svg viewBox="0 0 760 260" width="100%" role="img" aria-label="目标人群定义">
+          <defs><marker id="ax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <!-- axes -->
+          <line x1="190" y1="206" x2="640" y2="206" stroke="#86868b" stroke-width="1.5" marker-end="url(#ax)"/>
+          <line x1="190" y1="206" x2="190" y2="26" stroke="#86868b" stroke-width="1.5" marker-end="url(#ax)"/>
+          <text x="652" y="210" font-size="12" fill="#86868b">购买力</text>
+          <text x="190" y="16" text-anchor="middle" font-size="12" fill="#86868b">当前消费</text>
+          <!-- split lines -->
+          <line x1="400" y1="36" x2="400" y2="206" stroke="#e8e8ed" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <line x1="190" y1="121" x2="610" y2="121" stroke="#e8e8ed" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <!-- target cell -->
+          <rect x="400" y="121" width="210" height="85" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <!-- labels -->
+          <text x="295" y="115" text-anchor="middle" font-size="13" font-weight="600" fill="#86868b">低购买力</text>
+          <text x="295" y="137" text-anchor="middle" font-size="12" fill="#86868b">非目标</text>
+          <text x="505" y="72" text-anchor="middle" font-size="13" font-weight="600" fill="#1d1d1f">高购买力 · 高消费</text>
+          <text x="505" y="94" text-anchor="middle" font-size="12" fill="#86868b">已在贡献 GMV · 增量有限</text>
+          <text x="505" y="157" text-anchor="middle" font-size="13" font-weight="600" fill="#1d9a5b">高购买力 · 低当前消费</text>
+          <text x="505" y="179" text-anchor="middle" font-size="12" fill="#515154">目标：未被挖掘的潜力用户</text>
+        </svg>
+        <figcaption>目标人群定义</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">02 · Model</div>
+      <h2>模型：两类特征，双维打分</h2>
+      <p class="b-text">从历史数据提取两类特征，对用户在<b>购买力</b>与<b>购物意愿</b>两个维度打分，输出高潜力用户池。</p>
+      <figure>
+        <svg viewBox="0 0 760 232" width="100%" role="img" aria-label="模型结构">
+          <defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <rect x="16" y="20" width="224" height="88" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="128" y="52" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">用户画像特征</text>
+          <text x="128" y="78" text-anchor="middle" font-size="12" fill="#86868b">设备档位 · 地区 · 年龄</text>
+          <rect x="16" y="124" width="224" height="88" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="128" y="152" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">购买行为特征</text>
+          <text x="128" y="176" text-anchor="middle" font-size="12" fill="#86868b">Mall 订单 · 电子产品 · 信用卡</text>
+          <text x="128" y="194" text-anchor="middle" font-size="12" fill="#86868b">品类广度 · 收藏价位</text>
+          <line x1="244" y1="64" x2="296" y2="100" stroke="#86868b" stroke-width="1.5" marker-end="url(#am)"/>
+          <line x1="244" y1="168" x2="296" y2="132" stroke="#86868b" stroke-width="1.5" marker-end="url(#am)"/>
+          <rect x="300" y="72" width="180" height="88" rx="13" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
+          <text x="390" y="104" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">预测模型</text>
+          <text x="390" y="130" text-anchor="middle" font-size="12" fill="#86868b">购买力 × 购物意愿 打分</text>
+          <line x1="484" y1="116" x2="536" y2="116" stroke="#86868b" stroke-width="1.5" marker-end="url(#am)"/>
+          <rect x="544" y="72" width="200" height="88" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="644" y="104" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">高潜力用户池</text>
+          <text x="644" y="130" text-anchor="middle" font-size="12" fill="#1d9a5b">「还没发力」的用户</text>
+        </svg>
+        <figcaption>模型结构</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">03 · Validation</div>
+      <h2>双重验证：先证「找对了人」，再证「有增量」</h2>
+      <p class="b-text">第一层：与本地运营的收入及购物意愿问卷交叉验证，预测池与真实高净值池重合 <b>90%+</b>。第二层：A/B 实验——两组给完全相同的激励、避开大促窗口，实验组 GMV uplift <b>+20%（显著）</b>。</p>
+      <figure>
+        <svg viewBox="0 0 760 232" width="100%" role="img" aria-label="实验设计">
+          <defs><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <rect x="16" y="20" width="200" height="84" rx="13" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
+          <text x="116" y="52" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">实验组</text>
+          <text x="116" y="76" text-anchor="middle" font-size="12" fill="#86868b">模型预测的潜力用户</text>
+          <rect x="16" y="128" width="200" height="84" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="116" y="160" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">控制组</text>
+          <text x="116" y="184" text-anchor="middle" font-size="12" fill="#86868b">全量用户随机抽样</text>
+          <line x1="220" y1="62" x2="272" y2="100" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
+          <line x1="220" y1="170" x2="272" y2="132" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
+          <rect x="276" y="64" width="220" height="104" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="386" y="96" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">完全相同的激励</text>
+          <text x="386" y="122" text-anchor="middle" font-size="12" fill="#86868b">同一组优惠券 · 站内信 · 推送</text>
+          <text x="386" y="140" text-anchor="middle" font-size="12" fill="#86868b">避开大促窗口</text>
+          <line x1="500" y1="116" x2="552" y2="116" stroke="#86868b" stroke-width="1.5" marker-end="url(#ab)"/>
+          <rect x="560" y="72" width="184" height="88" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="652" y="106" text-anchor="middle" font-size="14" font-weight="650" fill="#1d9a5b">GMV Uplift +20%</text>
+          <text x="652" y="130" text-anchor="middle" font-size="12" fill="#515154">实验组显著高于控制组</text>
+        </svg>
+        <figcaption>实验设计</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">04 · Scale-up</div>
+      <h2>推广：复用方法论，每个市场重新训练</h2>
+      <p class="b-text">沉淀为标杆打法推广至其他市场。特征分布与用户行为因市场而异，直接迁移模型不可靠——<b>框架复用、参数各自重训</b>。</p>
+      <figure>
+        <svg viewBox="0 0 760 128" width="100%" role="img" aria-label="多市场推广路径">
+          <defs><marker id="as" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <rect x="16" y="20" width="220" height="88" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="126" y="52" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">PH 标杆项目</text>
+          <text x="126" y="78" text-anchor="middle" font-size="12" fill="#86868b">模型 · 代码 · 特征工程</text>
+          <line x1="240" y1="64" x2="278" y2="64" stroke="#86868b" stroke-width="1.5" marker-end="url(#as)"/>
+          <rect x="284" y="20" width="220" height="88" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="394" y="52" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">方法论移植</text>
+          <text x="394" y="78" text-anchor="middle" font-size="12" fill="#86868b">培训各市场 BI · 提供代码模板</text>
+          <line x1="508" y1="64" x2="546" y2="64" stroke="#86868b" stroke-width="1.5" marker-end="url(#as)"/>
+          <rect x="552" y="20" width="192" height="88" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="648" y="52" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">各市场落地</text>
+          <text x="648" y="78" text-anchor="middle" font-size="12" fill="#1d9a5b">本地重新训练与验证</text>
+        </svg>
+        <figcaption>多市场推广路径</figcaption>
+      </figure>
+    </div>
+
+    <div class="block role-card">
+      <div class="b-kicker">My Role</div>
+      <h2>我的核心贡献</h2>
+      <ul class="b-list">
+        <li>① 从 GMV 四因子出发论证机会在「客单价与针对性」，确立「预测潜力而非存量」的目标定义</li>
+        <li>② 设计并构建双维打分模型（画像 + 购买行为两类特征）</li>
+        <li>③ 设计双重验证：问卷交叉验证 + A/B 实验量化增量</li>
+        <li>④ 推广阶段负责方法论培训与代码模板，各市场由当地 BI 团队重训落地</li>
+      </ul>
     </div>
 
     <div class="next"><a onclick="go('dash')">下一个项目：指标体系与自动化看板 →</a></div>
