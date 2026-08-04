@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Xie Feng · Data Analytics Portfolio</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="brand" onclick="go('home')"><span class="dot"></span>Xie Feng · Data</div>
+  <button class="back" onclick="go('home')">‹ 返回</button>
+</nav>
+
+<!-- ============ HOME ============ -->
+<div class="view" id="v-home">
+  <header class="hero">
+    <img class="hero-avatar" src="assets/img/avatar.jpg" alt="Xie Feng">
+    <h1>谢峰</h1>
+    <div class="tagline"><span class="b">Growth</span><i>·</i>Data<i>·</i>AI</div>
+    <p class="about">4 年增长方向数据分析师。在 Shopee 用户增长部门做了 3 年半在线营销分析——管着 11 个市场、7 个渠道的站外投流数据；在 MEXC 从零搭过 BD 分析体系。擅长把模糊的业务问题变成可观测的指标，再用实验证明答案。</p>
+    <div class="chips">
+      <span class="chip">SQL</span><span class="chip">Python</span><span class="chip">A/B 实验</span>
+      <span class="chip">异动归因</span><span class="chip">预测建模</span><span class="chip">ETL 自动化</span>
+      <span class="chip">Tableau · Power BI</span><span class="chip">Claude Code</span>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="eyebrow">Experience</div><h2>工作经历</h2></div>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <div class="co"><b>Shopee</b><span>2021.05 – 2025.02 · Singapore</span></div>
+        <div class="role">Data Analyst · Brand &amp; Growth Marketing</div>
+        <ul>
+          <li>支持最大流量入口「在线营销」：Google / Facebook / TikTok 等渠道的站外投流，覆盖拉新与促活</li>
+          <li>数据工程侧：ETL 自动化、指标底表、11 市场 × 7 渠道自动化看板</li>
+          <li>分析侧：A/B 实验、异动归因、归因模型、预测建模</li>
+        </ul>
+      </div>
+      <div class="exp-card">
+        <div class="co"><b>MEXC</b><span>2025.04 – 2025.07 · Singapore</span></div>
+        <div class="role">Regional Growth Data Analyst · BD &amp; Affiliate</div>
+        <ul>
+          <li>从零搭建 BD 主题中间表体系——区域 BD 团队的唯一数据源</li>
+          <li>KOL / Affiliate 全漏斗自动化日报（注册 → KYC → 首充 → 交易 → 佣金）</li>
+          <li>旗舰获客活动「8,000 USDT」的转化与成本结构分析</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ai-strip">
+      <p><b>AI-native 工作方式</b>：gap year 用 AI coding agents 独立交付 8+ 个产品（黑客松 Top 30 / 300+）——本作品集也由 Claude Code 协作构建。</p>
+      <a href="https://xf-aiportfolio.onrender.com" target="_blank" rel="noopener">AI 作品集 ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="eyebrow">Projects</div><h2>项目</h2></div>
+      <div class="hint">点击卡片查看详情</div>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card" onclick="go('rtg')">
+        <div class="p-kicker">Shopee · 2024.05 – 2025.01</div>
+        <h3>Retargeting Accuracy：异动归因与广告触达修复</h3>
+        <p class="p-sum">重定向渠道 ROI 异常下滑。拆漏斗定位、提出机制假设、自设新指标验证，推动广告平台修正与 RTA 实时人群接口落地。</p>
+        <div class="p-stat">ROI +30%<small>新指标纳入日报体系</small></div>
+        <div class="tags"><span class="tag">异动归因</span><span class="tag">指标设计</span><span class="tag">跨团队落地</span></div>
+        <span class="go">→</span>
+      </div>
+      <div class="proj-card" onclick="go('ses')">
+        <div class="p-kicker">Shopee · 2023.06 – 2023.08</div>
+        <h3>高净值用户预测与精准营销</h3>
+        <p class="p-sum">用画像与行为信号预测高购买力用户，问卷验证 90%+ 重合，A/B 实验证明增量，方法论推广至多市场。</p>
+        <div class="p-stat">GMV +20%<small>A/B 实验组 uplift</small></div>
+        <div class="tags"><span class="tag">预测建模</span><span class="tag">A/B 实验</span><span class="tag">精准营销</span></div>
+        <span class="go">→</span>
+      </div>
+      <div class="proj-card" onclick="go('dash')">
+        <div class="p-kicker">Shopee · 2023.10 – 2025.02</div>
+        <h3>营销指标体系与自动化看板</h3>
+        <p class="p-sum">先对齐指标字典再建设施：整合多外部广告 API 到统一数据库，ETL 全自动化，日更看板成为团队唯一数据源。</p>
+        <div class="p-stat">11 市场 × 7 渠道<small>每周省 20+ 小时人工</small></div>
+        <div class="tags"><span class="tag">指标体系</span><span class="tag">ETL 自动化</span><span class="tag">数据整合</span></div>
+        <span class="go">→</span>
+      </div>
+      <div class="proj-card" onclick="go('mexc')">
+        <div class="p-kicker">MEXC · 2025.04 – 2025.07</div>
+        <h3>BD / Affiliate 分析体系 0 → 1</h3>
+        <p class="p-sum">为区域 BD 团队从零搭建数据层：中间表体系 + KOL 全漏斗日报，支撑高 ROI 合作决策与获客活动分析。</p>
+        <div class="p-stat">0 → 1<small>区域 BD 唯一数据源</small></div>
+        <div class="tags"><span class="tag">数据基建</span><span class="tag">漏斗分析</span><span class="tag">Web3</span></div>
+        <span class="go">→</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>Xie Feng · xiefengmrx@gmail.com · Singapore PR</footer>
+</div>
+
+<!-- ============ RTG DETAIL ============ -->
+<div class="view" id="v-rtg">
+  <div class="d-wrap">
+    <div class="d-head">
+      <div class="tags"><span class="tag">异动归因</span><span class="tag">指标设计</span><span class="tag">跨团队落地</span></div>
+      <h1>Retargeting Accuracy<br>异动归因与广告触达修复</h1>
+      <p class="d-sub">一个面向非活跃用户的重定向渠道 ROI 持续低迷。我从漏斗拆解出发定位问题、提出机制假设、自设新指标完成验证，最终推动广告平台修正投放逻辑，并与产品团队共建 RTA（Real-Time API）实时人群接口从根源解决。</p>
+      <div class="d-meta">Shopee · 2024.05 – 2025.01 · 角色：主导诊断与指标设计的数据分析师</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">+30%</div><div class="l">问题渠道 ROI 回到历史基线</div></div>
+        <div class="stat"><div class="n g">~+20%</div><div class="l">RTA 推广后其他渠道 ROI（A/B 验证）</div></div>
+        <div class="stat"><div class="n g">日报 KPI</div><div class="l">新指标长期纳入监测体系</div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">00 · Background</div>
+      <h2>背景：一个「召回沉睡用户」的渠道亮了红灯</h2>
+      <p class="b-text">重定向（Retargeting）广告面向<b>近期不活跃的老用户</b>，目标是把他们召回下单——站外投流里转化效率最高的一类。异常出现：某个重定向渠道的 ROI（GMV / Cost）<b>持续低于历史基线</b>，而预算还在照常消耗。</p>
+      <figure>
+        <svg viewBox="0 0 760 210" width="100%" role="img" aria-label="背景图">
+          <defs><marker id="ar0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <!-- left: what retargeting is -->
+          <text x="170" y="32" text-anchor="middle" font-size="14" font-weight="650" fill="#1d1d1f">渠道定位</text>
+          <rect x="30" y="52" width="130" height="58" rx="12" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="95" y="77" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">重定向广告</text>
+          <text x="95" y="97" text-anchor="middle" font-size="12" fill="#86868b">站外渠道投放</text>
+          <line x1="168" y1="81" x2="200" y2="81" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar0)"/>
+          <rect x="208" y="52" width="130" height="58" rx="12" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="273" y="77" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">非活跃老用户</text>
+          <text x="273" y="97" text-anchor="middle" font-size="12" fill="#86868b">近期沉睡人群</text>
+          <path d="M 273 118 C 273 150 160 150 120 122" fill="none" stroke="#1d9a5b" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar0)"/>
+          <text x="200" y="170" text-anchor="middle" font-size="12.5" fill="#1d9a5b">召回 → 回流下单</text>
+          <!-- divider -->
+          <line x1="380" y1="26" x2="380" y2="186" stroke="#e8e8ed" stroke-width="1.5"/>
+          <!-- right: ROI trend -->
+          <text x="570" y="32" text-anchor="middle" font-size="14" font-weight="650" fill="#1d1d1f">异常信号：ROI 持续低迷</text>
+          <line x1="420" y1="166" x2="730" y2="166" stroke="#d2d2d7" stroke-width="1.5"/>
+          <line x1="420" y1="76" x2="730" y2="76" stroke="#86868b" stroke-width="1.2" stroke-dasharray="6 5"/>
+          <text x="726" y="66" text-anchor="end" font-size="12" fill="#86868b">历史基线</text>
+          <polyline points="430,82 490,88 540,104 590,128 660,142 720,146" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="660" y="128" text-anchor="middle" font-size="12.5" font-weight="600" fill="#e8590c">ROI ↓ 预算照常消耗</text>
+        </svg>
+        <figcaption>转化效率最高的召回渠道，却持续跑在基线之下——需要一个解释</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">01 · Diagnosis</div>
+      <h2>漏斗拆解：问题出在「谁被触达」</h2>
+      <p class="b-text">ROI（GMV / Cost）低迷，第一步不是猜原因，而是把用户旅程拆开看每一环。数据显示：曝光正常、<b>点击率不降反升、转化率显著下滑</b>。横向对比其他渠道均无异常，排除激励、季节与大盘因素——问题锁定在这个渠道「触达了谁」。</p>
+      <figure>
+        <svg viewBox="0 0 760 210" width="100%" role="img" aria-label="漏斗诊断图">
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker>
+          </defs>
+          <!-- stages -->
+          <rect x="20" y="38" width="200" height="86" rx="14" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="120" y="72" text-anchor="middle" font-size="17" font-weight="600" fill="#1d1d1f">曝光 Impression</text>
+          <text x="120" y="100" text-anchor="middle" font-size="14" fill="#1d9a5b">✓ 正常</text>
+          <line x1="228" y1="81" x2="272" y2="81" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar)"/>
+          <rect x="280" y="38" width="200" height="86" rx="14" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
+          <text x="380" y="72" text-anchor="middle" font-size="17" font-weight="600" fill="#1d1d1f">点击 Click</text>
+          <text x="380" y="100" text-anchor="middle" font-size="14" fill="#0071e3">↑ 不降反升（可疑）</text>
+          <line x1="488" y1="81" x2="532" y2="81" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar)"/>
+          <rect x="540" y="38" width="200" height="86" rx="14" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
+          <text x="640" y="72" text-anchor="middle" font-size="17" font-weight="600" fill="#1d1d1f">转化 Conversion</text>
+          <text x="640" y="100" text-anchor="middle" font-size="14" fill="#e8590c">↓ 显著下滑</text>
+          <!-- conclusion -->
+          <rect x="20" y="150" width="720" height="42" rx="10" fill="#f5f5f7"/>
+          <text x="380" y="177" text-anchor="middle" font-size="14" fill="#515154">横向对照其他渠道无异常 → 排除激励 / 季节 / 大盘因素 → 问题锁定：<tspan font-weight="650" fill="#1d1d1f">这个渠道触达了谁？</tspan></text>
+        </svg>
+        <figcaption>用户旅程拆解：点击升、转化降的组合指向「触达人群失真」</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">02 · Hypothesis</div>
+      <h2>机制假设：广告打到了不该打的人</h2>
+      <p class="b-text">从广告机制出发提出假设：<b>广告触达了大量非目标的活跃用户</b>。根源在离线人群包的工作机制——快照式打包传输，平台还要消化两三天才开始投放，<b>人群状态天然滞后于投放时刻</b>。</p>
+      <figure>
+        <svg viewBox="0 0 760 300" width="100%" role="img" aria-label="离线人群包机制图">
+          <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <!-- pipeline -->
+          <rect x="16" y="36" width="166" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="99" y="62" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">① Shopee 后台打包</text>
+          <text x="99" y="84" text-anchor="middle" font-size="12" fill="#86868b">按画像圈选</text>
+          <text x="99" y="102" text-anchor="middle" font-size="12" fill="#86868b">非活跃人群 → 人群包</text>
+          <line x1="188" y1="76" x2="212" y2="76" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <rect x="220" y="36" width="150" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="295" y="66" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">② 传输给广告平台</text>
+          <text x="295" y="90" text-anchor="middle" font-size="12" fill="#86868b">离线文件 · 一次性快照</text>
+          <line x1="376" y1="76" x2="400" y2="76" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <rect x="408" y="36" width="160" height="80" rx="13" fill="#fffbf0" stroke="#d9a406" stroke-width="1.5"/>
+          <text x="488" y="62" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">③ 平台消化入库</text>
+          <text x="488" y="84" text-anchor="middle" font-size="12.5" font-weight="600" fill="#b28704">需 T + 2–3 天</text>
+          <text x="488" y="102" text-anchor="middle" font-size="12" fill="#86868b">才能开始生效</text>
+          <line x1="574" y1="76" x2="598" y2="76" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <rect x="606" y="36" width="138" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="675" y="66" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1d1d1f">④ 按包定向投放</text>
+          <text x="675" y="90" text-anchor="middle" font-size="12" fill="#86868b">对着过期快照投</text>
+          <!-- time axis -->
+          <line x1="16" y1="140" x2="744" y2="140" stroke="#d2d2d7" stroke-width="1.2"/>
+          <text x="99" y="160" text-anchor="middle" font-size="11.5" fill="#86868b">T 日：打包时「非活跃」✓</text>
+          <text x="675" y="160" text-anchor="middle" font-size="11.5" fill="#86868b">T+3 日起：开始投放</text>
+          <!-- drift note -->
+          <rect x="16" y="182" width="728" height="62" rx="12" fill="#fff7f2" stroke="#e8590c" stroke-width="1.5"/>
+          <text x="380" y="208" text-anchor="middle" font-size="13.5" font-weight="600" fill="#e8590c">快照滞后：这几天里，部分用户已从「非活跃」变回「活跃」</text>
+          <text x="380" y="230" text-anchor="middle" font-size="12.5" fill="#515154">投放对象 ≠ 目标人群 → 活跃用户点击 ↑ 却无转化资格 → 转化 ↓ · ROI ↓</text>
+          <!-- cpc footnote -->
+          <text x="16" y="280" font-size="12" fill="#86868b">※ 叠加因素：CPC 计费下，平台亦有扩量投放的动机——点击越多、平台收入越多</text>
+        </svg>
+        <figcaption>离线人群包的完整链路：从打包到生效隔了两三天，人群状态早已漂移</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">03 · Metric Design</div>
+      <h2>把假设变成可观测的指标</h2>
+      <p class="b-text">假设不能停在猜想。我定义了一个新指标 <b>Retargeting Accuracy</b>——衡量「点进来的人里，有多少真的是我们要找的人」。验证结果：问题渠道的精准度比历史水平下降 30–40%，包外点击者画像证实为活跃用户；其他渠道精准度平稳——假设成立。</p>
+      <div class="formula">
+        <div class="f">Retargeting Accuracy =<span class="frac"><span class="top">在人群包中的点击用户</span><span class="bot">该广告全部点击用户</span></span></div>
+        <div class="note">规模无关的比率型指标：不受投放量影响，可跨渠道、跨时间对比</div>
+      </div>
+      <figure>
+        <svg viewBox="0 0 760 220" width="100%" role="img" aria-label="精准度对比图">
+          <!-- left: problem channel -->
+          <text x="190" y="28" text-anchor="middle" font-size="14.5" font-weight="650" fill="#1d1d1f">问题渠道</text>
+          <rect x="90" y="60" width="80" height="110" rx="8" fill="#0071e3" opacity=".85"/>
+          <text x="130" y="50" text-anchor="middle" font-size="13" fill="#86868b">历史水平</text>
+          <rect x="220" y="115" width="80" height="55" rx="8" fill="#e8590c" opacity=".9"/>
+          <text x="260" y="105" text-anchor="middle" font-size="13" fill="#e8590c" font-weight="600">↓ 30–40%</text>
+          <line x1="60" y1="170" x2="330" y2="170" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="130" y="192" text-anchor="middle" font-size="12.5" fill="#86868b">修复前</text>
+          <text x="260" y="192" text-anchor="middle" font-size="12.5" fill="#86868b">异常期</text>
+          <!-- divider -->
+          <line x1="390" y1="30" x2="390" y2="190" stroke="#e8e8ed" stroke-width="1.5"/>
+          <!-- right: other channels -->
+          <text x="570" y="28" text-anchor="middle" font-size="14.5" font-weight="650" fill="#1d1d1f">其他渠道（对照）</text>
+          <rect x="470" y="62" width="80" height="108" rx="8" fill="#86868b" opacity=".45"/>
+          <rect x="600" y="66" width="80" height="104" rx="8" fill="#86868b" opacity=".45"/>
+          <text x="570" y="52" text-anchor="middle" font-size="13" fill="#1d9a5b">✓ 平稳无异常</text>
+          <line x1="440" y1="170" x2="710" y2="170" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="510" y="192" text-anchor="middle" font-size="12.5" fill="#86868b">同期</text>
+          <text x="640" y="192" text-anchor="middle" font-size="12.5" fill="#86868b">同期</text>
+        </svg>
+        <figcaption>问题渠道精准度大幅偏离历史水平，对照渠道平稳——假设得到数据验证</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">04 · Solution</div>
+      <h2>短期修正 + 长期根治</h2>
+      <p class="b-text">短期：拿日志级证据与广告平台对质，修正投放逻辑——<b>问题渠道 ROI 回到历史基线（+30%）</b>。长期：与产品团队共建 <b>RTA（Real-Time API）实时人群接口</b>，把「离线快照」换成「投放时实时校验」；经 A/B 测试验证后逐步推广至 Google、Facebook 等渠道，<b>整体 ROI 提升近 20%</b>。</p>
+      <figure>
+        <svg viewBox="0 0 760 250" width="100%" role="img" aria-label="解决方案图">
+          <defs><marker id="ar3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <text x="30" y="32" font-size="13" font-weight="700" fill="#0071e3" letter-spacing="2">短期 · 止血</text>
+          <rect x="30" y="44" width="200" height="62" rx="12" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="130" y="70" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">日志级数据证据</text>
+          <text x="130" y="92" text-anchor="middle" font-size="12.5" fill="#86868b">包外点击明细 + 画像分析</text>
+          <line x1="238" y1="75" x2="278" y2="75" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar3)"/>
+          <rect x="286" y="44" width="200" height="62" rx="12" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="386" y="70" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">平台修正投放逻辑</text>
+          <text x="386" y="92" text-anchor="middle" font-size="12.5" fill="#86868b">按人群包约束触达</text>
+          <line x1="494" y1="75" x2="534" y2="75" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar3)"/>
+          <rect x="542" y="44" width="200" height="62" rx="12" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
+          <text x="642" y="70" text-anchor="middle" font-size="14" font-weight="650" fill="#0071e3">问题渠道 ROI 回到基线</text>
+          <text x="642" y="92" text-anchor="middle" font-size="12.5" fill="#515154">+30% · 精准度同步回升</text>
+          <text x="30" y="152" font-size="13" font-weight="700" fill="#1d9a5b" letter-spacing="2">长期 · 根治</text>
+          <rect x="30" y="164" width="200" height="62" rx="12" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="130" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">RTA 实时人群接口</text>
+          <text x="130" y="212" text-anchor="middle" font-size="12.5" fill="#1d9a5b">Real-Time API · 与产品共建</text>
+          <line x1="238" y1="195" x2="278" y2="195" stroke="#1d9a5b" stroke-width="1.5" marker-end="url(#ar3)"/>
+          <rect x="286" y="164" width="200" height="62" rx="12" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="386" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">A/B 测试验证</text>
+          <text x="386" y="212" text-anchor="middle" font-size="12.5" fill="#86868b">实时校验 vs 离线快照</text>
+          <line x1="494" y1="195" x2="534" y2="195" stroke="#1d9a5b" stroke-width="1.5" marker-end="url(#ar3)"/>
+          <rect x="542" y="164" width="200" height="62" rx="12" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="642" y="190" text-anchor="middle" font-size="14" font-weight="650" fill="#1d9a5b">推广 Google / Facebook 等</text>
+          <text x="642" y="212" text-anchor="middle" font-size="12.5" fill="#515154">其他渠道整体 ROI +~20%</text>
+        </svg>
+        <figcaption>短期止血把 ROI 拉回基线；长期 RTA 经 A/B 验证后推广，其他渠道整体 ROI 提升近 20%</figcaption>
+      </figure>
+    </div>
+
+    <div class="block role-card">
+      <div class="b-kicker">My Role</div>
+      <h2>我的核心贡献</h2>
+      <p class="b-text">① 从 ROI 异常出发，通过漏斗拆解与业务理解提出「平台扩量」根因假设；② 设计精准度指标并完成数据验证，把假设证明成事实；③ 为短期修正与长期 RTA 方案持续提供数据支持与效果验收。方案执行由平台与产品团队主导，但<b>前置的诊断与验证是所有后续动作的依据</b>。</p>
+    </div>
+
+    <div class="next"><a onclick="go('ses')">下一个项目：高净值用户预测 →</a></div>
+  </div>
+</div>
+
+<!-- ============ SES DETAIL ============ -->
+<div class="view" id="v-ses">
+  <div class="d-wrap">
+    <div class="d-head">
+      <div class="tags"><span class="tag">预测建模</span><span class="tag">A/B 实验</span><span class="tag">精准营销</span></div>
+      <h1>高净值用户预测与精准营销</h1>
+      <p class="d-sub">PH 市场 GMV 增长乏力、营销预算有限。我用画像与行为信号建模预测「有购买力但尚未发力」的潜力用户，经问卷与 A/B 实验双重验证后分批推广，并将方法论复用到其他市场。</p>
+      <div class="d-meta">Shopee · PH 市场 · 2023.06 – 2023.08</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">+20%</div><div class="l">实验组 GMV uplift（显著）</div></div>
+        <div class="stat"><div class="n g">90%+</div><div class="l">预测池与问卷 ground truth 重合</div></div>
+        <div class="stat"><div class="n g">多市场</div><div class="l">方法论复用 · 各市场重新训练</div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">Approach</div>
+      <h2>从业务框架到实验验证</h2>
+      <p class="b-text">GMV = 用户数 × 付费率 × 频次 × 客单价。拉新、付费率、频次三条杠杆在 PH 已趋饱和，剩余空间在「客单价与针对性」——目标不是找已经高消费的用户，而是<b>预测有潜力但未发力的用户</b>，把有限预算投给增量。</p>
+      <figure>
+        <svg viewBox="0 0 760 190" width="100%" role="img" aria-label="项目流程图">
+          <defs><marker id="ar4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <rect x="16" y="40" width="160" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="96" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">预测建模</text>
+          <text x="96" y="94" text-anchor="middle" font-size="12" fill="#86868b">画像 + 购买行为信号</text>
+          <line x1="182" y1="80" x2="212" y2="80" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar4)"/>
+          <rect x="220" y="40" width="160" height="80" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="300" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">问卷验证</text>
+          <text x="300" y="94" text-anchor="middle" font-size="12" fill="#1d9a5b">与真实高净值池重合 90%+</text>
+          <line x1="386" y1="80" x2="416" y2="80" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar4)"/>
+          <rect x="424" y="40" width="160" height="80" rx="13" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
+          <text x="504" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">A/B 实验</text>
+          <text x="504" y="94" text-anchor="middle" font-size="12" fill="#0071e3">同等激励 · GMV +20%</text>
+          <line x1="590" y1="80" x2="620" y2="80" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar4)"/>
+          <rect x="628" y="40" width="116" height="80" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="686" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">多市场推广</text>
+          <text x="686" y="94" text-anchor="middle" font-size="12" fill="#1d9a5b">框架复用·分市场重训</text>
+          <text x="380" y="160" text-anchor="middle" font-size="13" fill="#86868b">特征两类：用户画像（设备档位 / 地区 / 年龄）＋ 购买行为（Mall 订单 / 品类广度 / 支付方式 / 收藏价位）</text>
+        </svg>
+        <figcaption>预测 → 双重验证 → 实验证明增量 → 规模化推广</figcaption>
+      </figure>
+      <p class="b-text" style="margin-top:18px">推广至其他市场时坚持<b>「复用方法论、每个市场重新训练」</b>——特征分布与用户行为因市场而异，直接迁移模型不可靠。我负责向各市场 BI 团队培训方法论、提供 PH 代码模板与特征工程支持。</p>
+    </div>
+
+    <div class="next"><a onclick="go('dash')">下一个项目：指标体系与自动化看板 →</a></div>
+  </div>
+</div>
+
+<!-- ============ DASH DETAIL ============ -->
+<div class="view" id="v-dash">
+  <div class="d-wrap">
+    <div class="d-head">
+      <div class="tags"><span class="tag">指标体系</span><span class="tag">ETL 自动化</span><span class="tag">数据整合</span></div>
+      <h1>营销指标体系与自动化看板</h1>
+      <p class="d-sub">先与业务对齐指标字典和计算口径，再把散落在多个外部广告平台的数据整合进统一数据库，ETL 全自动化——让一个数字在所有团队只有一个含义。</p>
+      <div class="d-meta">Shopee · 2023.10 – 2025.02</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">11 × 7</div><div class="l">市场 × 渠道 · 日更看板</div></div>
+        <div class="stat"><div class="n g">20h+</div><div class="l">每周节省人工</div></div>
+        <div class="stat"><div class="n g">唯一数据源</div><div class="l">流量与花费监控的 single source of truth</div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">Pipeline</div>
+      <h2>从分散 API 到统一看板</h2>
+      <figure>
+        <svg viewBox="0 0 760 230" width="100%" role="img" aria-label="数据管道图">
+          <defs><marker id="ar5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <rect x="20" y="20" width="150" height="38" rx="10" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="95" y="44" text-anchor="middle" font-size="13" fill="#1d1d1f">Google Ads API</text>
+          <rect x="20" y="66" width="150" height="38" rx="10" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="95" y="90" text-anchor="middle" font-size="13" fill="#1d1d1f">Facebook API</text>
+          <rect x="20" y="112" width="150" height="38" rx="10" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="95" y="136" text-anchor="middle" font-size="13" fill="#1d1d1f">TikTok API</text>
+          <rect x="20" y="158" width="150" height="38" rx="10" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="95" y="182" text-anchor="middle" font-size="13" fill="#1d1d1f">第三方平台</text>
+          <line x1="178" y1="109" x2="228" y2="109" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar5)"/>
+          <rect x="236" y="74" width="150" height="70" rx="13" fill="#fff" stroke="#0071e3" stroke-width="1.5"/>
+          <text x="311" y="103" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">ETL 自动化</text>
+          <text x="311" y="124" text-anchor="middle" font-size="12" fill="#86868b">清洗 · 转换 · 落表</text>
+          <line x1="394" y1="109" x2="444" y2="109" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar5)"/>
+          <rect x="452" y="74" width="140" height="70" rx="13" fill="#fff" stroke="#d2d2d7" stroke-width="1.5"/>
+          <text x="522" y="103" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">统一数据库</text>
+          <text x="522" y="124" text-anchor="middle" font-size="12" fill="#86868b">质量与一致性校验</text>
+          <line x1="600" y1="109" x2="650" y2="109" stroke="#86868b" stroke-width="1.5" marker-end="url(#ar5)"/>
+          <rect x="658" y="60" width="86" height="98" rx="13" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.5"/>
+          <text x="701" y="95" text-anchor="middle" font-size="14" font-weight="600" fill="#1d1d1f">日更看板</text>
+          <text x="701" y="118" text-anchor="middle" font-size="12" fill="#1d9a5b">11 市场</text>
+          <text x="701" y="136" text-anchor="middle" font-size="12" fill="#1d9a5b">7 渠道</text>
+          <text x="380" y="215" text-anchor="middle" font-size="13" fill="#86868b">建设前置动作：与业务对齐指标字典与计算口径（spend / traffic / CPC / 转化 / ROI）——一个数字只有一个含义</text>
+        </svg>
+        <figcaption>指标字典先行 → 多源整合 → ETL 自动化 → 团队唯一数据源</figcaption>
+      </figure>
+    </div>
+
+    <div class="next"><a onclick="go('mexc')">下一个项目：BD 分析体系 0 → 1 →</a></div>
+  </div>
+</div>
+
+<!-- ============ MEXC DETAIL ============ -->
+<div class="view" id="v-mexc">
+  <div class="d-wrap">
+    <div class="d-head">
+      <div class="tags"><span class="tag">数据基建</span><span class="tag">漏斗分析</span><span class="tag">Web3</span></div>
+      <h1>BD / Affiliate 分析体系 0 → 1</h1>
+      <p class="d-sub">加入时区域 BD（affiliate marketing）团队没有任何分析基础设施。我从零设计 BD 主题中间表体系，把 affiliate、KOL、被推荐用户数据整合为统一分析层，并搭建全漏斗自动化日报。</p>
+      <div class="d-meta">MEXC · 2025.04 – 2025.07 · Regional Growth Data Analyst</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">0 → 1</div><div class="l">BD 中间表体系从零搭建</div></div>
+        <div class="stat"><div class="n g">全漏斗</div><div class="l">KOL / Affiliate 自动化日报</div></div>
+        <div class="stat"><div class="n g">唯一数据源</div><div class="l">区域 BD 团队决策基础</div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">Funnel</div>
+      <h2>Partner 级全漏斗：每个 KOL 的完整价值链</h2>
+      <p class="b-text">日报追踪每个 KOL / affiliate 带来用户的完整旅程，让 BD 能<b>加倍投入高 ROI 合作、砍掉低效合作</b>。另主导旗舰获客活动「8,000 USDT」的分层任务转化与成本结构分析，定位激活瓶颈。</p>
+      <figure>
+        <svg viewBox="0 0 760 150" width="100%" role="img" aria-label="KOL 漏斗图">
+          <defs><marker id="ar6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker></defs>
+          <g font-size="13.5" font-weight="600">
+            <rect x="16" y="40" width="104" height="56" rx="11" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="68" y="73" text-anchor="middle" fill="#1d1d1f">注册</text>
+            <rect x="140" y="40" width="104" height="56" rx="11" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="192" y="73" text-anchor="middle" fill="#1d1d1f">KYC</text>
+            <rect x="264" y="40" width="104" height="56" rx="11" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="316" y="73" text-anchor="middle" fill="#1d1d1f">首充 FTD</text>
+            <rect x="388" y="40" width="104" height="56" rx="11" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="440" y="73" text-anchor="middle" fill="#1d1d1f">首次交易</text>
+            <rect x="512" y="40" width="104" height="56" rx="11" fill="#fff" stroke="#d2d2d7" stroke-width="1.4"/><text x="564" y="66" text-anchor="middle" fill="#1d1d1f">现货 / 合约</text><text x="564" y="86" text-anchor="middle" font-size="12" font-weight="400" fill="#86868b">交易量</text>
+            <rect x="636" y="40" width="108" height="56" rx="11" fill="#f0faf4" stroke="#1d9a5b" stroke-width="1.4"/><text x="690" y="73" text-anchor="middle" fill="#1d1d1f">佣金支出</text>
+          </g>
+          <line x1="122" y1="68" x2="136" y2="68" stroke="#86868b" stroke-width="1.4" marker-end="url(#ar6)"/>
+          <line x1="246" y1="68" x2="260" y2="68" stroke="#86868b" stroke-width="1.4" marker-end="url(#ar6)"/>
+          <line x1="370" y1="68" x2="384" y2="68" stroke="#86868b" stroke-width="1.4" marker-end="url(#ar6)"/>
+          <line x1="494" y1="68" x2="508" y2="68" stroke="#86868b" stroke-width="1.4" marker-end="url(#ar6)"/>
+          <line x1="618" y1="68" x2="632" y2="68" stroke="#86868b" stroke-width="1.4" marker-end="url(#ar6)"/>
+          <text x="380" y="130" text-anchor="middle" font-size="13" fill="#86868b">按 KOL / affiliate / 区域 / 渠道切分 · 自动化日报 · ROI 排序驱动合作决策</text>
+        </svg>
+        <figcaption>Partner 级漏斗：从注册到佣金的完整价值链追踪</figcaption>
+      </figure>
+    </div>
+
+    <div class="next"><a onclick="go('rtg')">回到第一个项目：Retargeting Accuracy →</a></div>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
