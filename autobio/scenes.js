@@ -22,3 +22,10 @@ all('[data-network-agent]').forEach(b=>b.addEventListener('click',()=>chooseAgen
 const software={collect:{image:'notebook',text:'多源信息按天归档，形成连续的个人数据资产。'},manage:{image:'journey',text:'按时间、主题与来源组织记录，保留可追溯的关联。'},analyze:{image:'sprout',text:'汇总生活指标，逐步发现值得验证的行为模式。'}};let mode='collect';function update(){const s=software[mode];$('software-art').src='assets/botanical-set/'+s.image+'.webp';$('software-description').textContent=s.text;$('ecosystem-detail').textContent='多源生活数据'+' → '+({collect:'按天归档，保留时间与来源。',manage:'连接相关记录，形成可检索的个人 context。',analyze:'对照长期变化，为个人 Agent 提供分析依据。'}[mode]);}
 all('[data-software]').forEach(b=>b.addEventListener('click',()=>{mode=b.dataset.software;all('[data-software]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));update()}));
 })();
+
+(()=>{
+ const steps={see:{label:'画面观察',text:'一条弯曲的步道穿过树林，路旁分布着花草与石头。',tags:['树林','步道','步道']},relate:{label:'上下文示例 · 来自当天日记',text:'“周末去郊外徒步，在林间停了一会儿。离开城市后，心情放松了很多。”',tags:['周末徒步','郊外','本人表达：放松']},index:{label:'一句话语义指纹',text:'周末郊外徒步时拍下的林间步道，是当天日记中让自己放松的一段行程。',tags:['可检索：林间徒步','可关联：旅行经历','可分析：活动与心情']}};
+ const tabs=[...document.querySelectorAll('[data-fingerprint]')];
+ function show(key,focus=false){const step=steps[key];tabs.forEach(b=>{const on=b.dataset.fingerprint===key;b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1;if(on&&focus)b.focus()});document.getElementById('fingerprint-panel').setAttribute('aria-labelledby','fingerprint-tab-'+key);document.getElementById('fingerprint-label').textContent=step.label;document.getElementById('fingerprint-text').textContent=step.text;document.getElementById('fingerprint-tags').replaceChildren(...step.tags.map(t=>{const el=document.createElement('span');el.textContent=t;return el}));}
+ tabs.forEach((b,i)=>{b.addEventListener('click',()=>show(b.dataset.fingerprint));b.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%3;if(e.key==='ArrowLeft')n=(i+2)%3;if(e.key==='Home')n=0;if(e.key==='End')n=2;if(n!==undefined){e.preventDefault();show(tabs[n].dataset.fingerprint,true)}})});
+})();
