@@ -12,6 +12,7 @@ const PROJECTS = [
 ];
 
 function go(view){
+  if(view === 'autobio'){ location.assign('autobio/'); return; }
   if(view === 'radar'){ location.assign('forward/'); return; }
   if(!VIEWS.includes(view)) view = 'home';
   location.hash = (view === 'home') ? '' : view;
@@ -26,6 +27,7 @@ function jump(id){ const el=document.getElementById(id); if(el) el.scrollIntoVie
 
 function render(){
   let v = location.hash.replace('#','') || 'home';
+  if(v === 'autobio'){ location.replace('autobio/'); return; }
   if(v === 'radar'){ location.replace('forward/'); return; }
   if(!VIEWS.includes(v)) v = 'home';
   document.querySelectorAll('.view').forEach(s => s.classList.toggle('active', s.id === v));
