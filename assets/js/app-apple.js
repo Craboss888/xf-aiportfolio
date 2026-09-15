@@ -4,7 +4,7 @@ const PROJECTS = [
   {id:'laoban',    t:'laoban.ai · AI 虚拟董事会', k:'大项目'},
   {id:'wallpaper', t:'AI 壁纸店铺 · HotYume', k:'大项目'},
   {id:'autobio',   t:'AI 数字自传',           k:'大项目'},
-  {id:'radar',     t:'岗位雷达',              k:'大项目'},
+  {id:'radar',     t:'向前 · 一站式求职平台',              k:'大项目'},
   {id:'hkid',      t:'HKID 预约监测',         k:'工具'},
   {id:'harmony',   t:'和声工作台',            k:'工具'},
   {id:'livehouse', t:'Livehouse 点歌系统',    k:'工具'},
@@ -12,6 +12,7 @@ const PROJECTS = [
 ];
 
 function go(view){
+  if(view === 'radar'){ location.assign('forward/'); return; }
   if(!VIEWS.includes(view)) view = 'home';
   location.hash = (view === 'home') ? '' : view;
   if((location.hash.replace('#','')||'home') === view) render();
@@ -25,6 +26,7 @@ function jump(id){ const el=document.getElementById(id); if(el) el.scrollIntoVie
 
 function render(){
   let v = location.hash.replace('#','') || 'home';
+  if(v === 'radar'){ location.replace('forward/'); return; }
   if(!VIEWS.includes(v)) v = 'home';
   document.querySelectorAll('.view').forEach(s => s.classList.toggle('active', s.id === v));
   document.body.classList.toggle('detail', v !== 'home');
