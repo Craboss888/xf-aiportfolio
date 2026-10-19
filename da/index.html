@@ -108,7 +108,7 @@
     <div class="d-head">
       <div class="tags"><span class="tag">异动归因</span><span class="tag">指标设计</span><span class="tag">跨团队落地</span></div>
       <h1>Retargeting Accuracy<br>异动归因与广告触达修复</h1>
-      <p class="d-sub">一个面向非活跃用户的重定向渠道 ROI 持续低迷。我从漏斗拆解出发定位问题、提出机制假设、自设新指标完成验证，最终推动广告平台修正投放逻辑，并与产品团队共建 RTA（Real-Time API）实时人群接口从根源解决。</p>
+      <p class="d-sub">一个面向非活跃用户的重定向渠道 ROI 持续低迷。我从漏斗拆解出发提出假设并快速分层验证，追到离线人群包机制，再设计按人群包计算的精准度指标锁定问题渠道，最终推动广告平台修正投放逻辑，并与产品团队共建 RTA（Real-Time API）实时人群接口从根源解决。</p>
       <div class="d-meta">Shopee · 2024.05 – 2025.01 · 角色：主导诊断与指标设计的数据分析师</div>
       <div class="stat-row">
         <div class="stat"><div class="n">+30%</div><div class="l">问题渠道 ROI 回到历史基线</div></div>
@@ -179,8 +179,36 @@
 
     <div class="block">
       <div class="b-kicker">02 · Hypothesis</div>
-      <h2>机制假设：广告打到了不该打的人</h2>
-      <p class="b-text">从广告机制出发提出假设：<b>广告触达了大量非目标的活跃用户</b>。根源在离线人群包的工作机制——快照式打包传输，平台还要消化两三天才开始投放，<b>人群状态天然滞后于投放时刻</b>。</p>
+      <h2>假设与快速验证：广告打错了人</h2>
+      <p class="b-text">点击升、转化降，像是广告触达了<b>本来就活跃、不需要召回的人</b>：他们爱点，但落地后发现不符合回归优惠，不下单。先用最快的办法验证：把点击用户<b>按距上次活跃的天数分层</b>。结果<b>很大一部分点击用户近期刚活跃过</b>，并非 30 天未登录的目标人群，假设初步成立。</p>
+      <figure>
+        <svg viewBox="0 0 760 236" width="100%" role="img" aria-label="点击用户按活跃天数分层">
+          <text x="20" y="28" font-size="14" font-weight="650" fill="#1d1d1f">问题渠道的点击用户 · 按距上次活跃天数分层</text>
+          <!-- rows -->
+          <text x="190" y="72" text-anchor="end" font-size="13" fill="#515154">近 3 天活跃</text>
+          <rect x="204" y="56" width="330" height="24" rx="6" fill="#e8590c" opacity=".88"/>
+          <text x="190" y="112" text-anchor="end" font-size="13" fill="#515154">4–7 天</text>
+          <rect x="204" y="96" width="210" height="24" rx="6" fill="#e8590c" opacity=".7"/>
+          <text x="190" y="152" text-anchor="end" font-size="13" fill="#515154">8–29 天</text>
+          <rect x="204" y="136" width="120" height="24" rx="6" fill="#e8590c" opacity=".5"/>
+          <rect x="16" y="170" width="728" height="40" rx="10" fill="none" stroke="#1d9a5b" stroke-width="1.5" stroke-dasharray="6 5"/>
+          <text x="190" y="196" text-anchor="end" font-size="13" font-weight="600" fill="#1d9a5b">30 天以上未登录</text>
+          <rect x="204" y="180" width="90" height="24" rx="6" fill="#1d9a5b" opacity=".85"/>
+          <text x="310" y="197" font-size="12.5" fill="#1d9a5b">← 投放目标：点击用户本应全部落在这一层</text>
+          <!-- callout -->
+          <text x="556" y="84" font-size="13" font-weight="650" fill="#e8590c">大量点击来自</text>
+          <text x="556" y="104" font-size="13" font-weight="650" fill="#e8590c">近期活跃用户</text>
+          <text x="556" y="126" font-size="12.5" fill="#86868b">爱点击，但不符合</text>
+          <text x="556" y="144" font-size="12.5" fill="#86868b">回归优惠，不转化</text>
+        </svg>
+        <figcaption>示意图，条长不代表实际比例：点击人群明显偏向活跃用户，「打错人」得到初步证实</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="b-kicker">03 · Root Cause</div>
+      <h2>为什么会打错人：离线人群包的两个风险</h2>
+      <p class="b-text">投放靠离线人群包：后台把目标人群打包成文件交给渠道，渠道入库后再按包定向。这条链路有两处会让「交出去的人」和「实际打到的人」对不上：<b>名单在入库的几天里过时</b>，以及<b>渠道没有按名单投</b>。</p>
       <figure>
         <svg viewBox="0 0 760 244" width="100%" role="img" aria-label="离线人群包机制图">
           <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86868b"/></marker>
@@ -221,7 +249,7 @@
     </div>
 
     <div class="block">
-      <div class="b-kicker">03 · Metric Design</div>
+      <div class="b-kicker">04 · Metric Design</div>
       <h2>把假设变成可观测的指标</h2>
       <p class="b-text">假设不能停在猜想。我定义了一个新指标 <b>Retargeting Accuracy</b>——衡量「点进来的人里，有多少真的是我们要找的人」。验证结果：问题渠道的精准度比历史水平下降 30–40%，包外点击者画像证实为活跃用户；其他渠道精准度平稳——假设成立。</p>
       <div class="formula">
@@ -255,7 +283,7 @@
     </div>
 
     <div class="block">
-      <div class="b-kicker">04 · Solution</div>
+      <div class="b-kicker">05 · Solution</div>
       <h2>短期修正 + 长期根治</h2>
       <p class="b-text">短期：拿日志级证据与广告平台对质，修正投放逻辑——<b>问题渠道 ROI 回到历史基线（+30%）</b>。长期：与产品团队共建 <b>RTA（Real-Time API）实时人群接口</b>，把「离线快照」换成「投放时实时校验」；经 A/B 测试验证后逐步推广至 Google、Facebook 等渠道，<b>整体 ROI 提升近 20%</b>。</p>
       <figure>
@@ -294,8 +322,8 @@
       <div class="b-kicker">My Role</div>
       <h2>我的核心贡献</h2>
       <ul class="b-list">
-        <li>① 从 ROI 异常出发，通过漏斗拆解与业务理解提出「平台扩量」根因假设</li>
-        <li>② 设计精准度指标并完成数据验证，把假设证明成事实</li>
+        <li>① 从 ROI 异常出发拆漏斗，提出「打错人」假设并用活跃分层快速验证</li>
+        <li>② 追到离线人群包机制，设计按人群包计算的精准度指标，锁定问题渠道</li>
         <li>③ 为短期修正与长期 RTA 方案持续提供数据支持与效果验收</li>
       </ul>
     </div>
