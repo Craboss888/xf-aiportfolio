@@ -805,10 +805,37 @@ a.tool:hover .tool-go::after { width: 30px; }
   transition: color 0.2s;
 }
 .closing-mail:hover { color: var(--gold); }
-.closing-links { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 32px 0 0; padding: 0; font-size: 15px; }
-.closing-links a, .closing-links span { color: var(--soft); text-decoration: none; transition: color 0.2s; }
-.closing-links a:hover { color: var(--gold); }
-.closing-bio { margin: 28px 0 0; font-size: 14px; color: var(--faint); }
+.closing-tel {
+  display: block;
+  width: fit-content;
+  margin-top: 18px;
+  font-family: var(--latin);
+  font-weight: 300;
+  font-size: clamp(20px, 2.2vw, 32px);
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+  color: var(--soft);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.closing-tel:hover { color: var(--gold); }
+.closing-qrs { display: flex; gap: clamp(20px, 2.4vw, 32px); margin-top: clamp(28px, 3.4vw, 44px); }
+.closing-qr { display: flex; align-items: center; gap: 14px; color: var(--soft); text-decoration: none; }
+.closing-qr img { width: 76px; aspect-ratio: 1; border-radius: 10px; background: #fff; padding: 5px; }
+.closing-qr span { font-size: 14px; line-height: 1.6; transition: color 0.2s; }
+a.closing-qr:hover span { color: var(--gold); }
+.closing-sub { margin: clamp(32px, 4vw, 52px) 0 0; font-size: 15px; font-weight: 500; letter-spacing: 0.3em; color: var(--soft); }
+.closing-credits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  gap: 16px clamp(28px, 3.6vw, 56px);
+  margin: 16px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.closing-credits dt { font-size: 12px; letter-spacing: 0.2em; color: var(--gold); line-height: 1.6; }
+.closing-credits dd { margin: 4px 0 0; font-size: 14px; color: var(--soft); line-height: 1.5; }
 .closing-portrait {
   justify-self: end;
   width: min(100%, 480px);
@@ -889,6 +916,8 @@ a.tool:hover .tool-go::after { width: 30px; }
   .tools { grid-template-columns: 1fr; }
   .closing-inner { grid-template-columns: 1fr; }
   .closing-portrait { justify-self: start; width: min(64vw, 280px); order: -1; }
+  .closing-qrs { flex-direction: column; gap: 14px; }
+  .closing-credits { grid-template-columns: minmax(0, 1fr); }
   .chapter-head h2 { font-size: 26px; }
   .work { grid-template-columns: 1fr; gap: 0; }
   .work-text { padding-bottom: 8px; }
