@@ -82,7 +82,7 @@ figure { margin: 0; }
   --sleeve: min(58vh, 33vw, 540px);
   --nudge: clamp(16px, 2.5vw, 48px);
   --text-col: clamp(340px, 33vw, 480px);
-  --hero-gap: clamp(32px, 4vw, 72px);
+  --hero-gap: clamp(40px, 5.5vw, 104px);
   position: relative;
   min-height: max(640px, 100vh);
   display: flex;
@@ -121,9 +121,9 @@ figure { margin: 0; }
 }
 .nav a:hover { color: var(--ink); background-size: 100% 1px; }
 
-/* 矮窗口里唱片按高度缩小，整组跟着收窄居中，避免文字和唱片被拉开 */
+/* 整组宽度按文字栏和唱片算：矮窗口跟着唱片收窄，宽屏也不被全站版心卡住、挤窄文字栏 */
 .cover .wrap {
-  max-width: min(var(--wrap), calc(var(--text-col) + var(--hero-gap) + var(--sleeve) * 1.34 + var(--gutter) * 2));
+  max-width: calc(var(--text-col) + var(--hero-gap) + var(--sleeve) * 1.34 + var(--gutter) * 2);
   padding-left: calc(var(--gutter) + var(--nudge));
   padding-right: max(16px, calc(var(--gutter) - var(--nudge)));
 }
@@ -203,17 +203,16 @@ figure { margin: 0; }
 }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
 .hero-credits {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, auto));
-  justify-content: start;
-  gap: 0 clamp(24px, 3vw, 48px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px clamp(20px, 2vw, 40px);
   margin: clamp(28px, 5vh, 56px) 0 0;
   padding-top: clamp(14px, 2vh, 20px);
   border-top: 1px solid var(--line);
   animation: rise 1.2s var(--ease) 0.54s both;
 }
-.hero-credits dt { font-size: 12px; letter-spacing: 0.2em; color: var(--gold); line-height: 1.6; }
-.hero-credits dd { margin: 4px 0 0; font-size: 14px; color: var(--soft); line-height: 1.5; }
+.hero-credits dt { font-size: 13px; letter-spacing: 0.2em; color: var(--gold); line-height: 1.6; }
+.hero-credits dd { margin: 4px 0 0; font-size: clamp(15px, 1.1vw, 16px); color: rgba(242, 243, 247, 0.86); line-height: 1.5; white-space: nowrap; }
 
 /* 唱片：封套在左，黑胶往右滑出 */
 .album { position: relative; width: calc(var(--sleeve) * 1.34); height: var(--sleeve); }
@@ -909,7 +908,7 @@ a.closing-qr:hover span { color: var(--gold); }
   .album { order: -1; }
   .cue { display: none; }
   .hero-name { font-size: 64px; }
-  .hero-credits { grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+  .hero-credits { gap: 12px 24px; }
   .mega-word { font-size: 24vw; margin-bottom: -10vw; }
   .work.flip { grid-template-columns: 1fr; }
   .work.flip .work-text { order: 0; }
